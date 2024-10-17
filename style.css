@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --cor-fundo:#f1f0bd;
+    --cor-principal: #f1d9b5;
+    --cor-secundaria: #3d1d39;
+    --cor-destaque: #f3d0a5;
+    --cor-texto: #0e0d0e;
+}
+  
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
