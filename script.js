@@ -2,7 +2,7 @@
 // Variáveis globais
 let carrinho = [];
 let produtos = [
-  { id: 1, nome: "Texana 1", preco: 50.00, imagem: "img/texana1.jpg" },
+  { id: 1, nome: "Texana 1", preco: 50.00, imagem: "img/texana.avif" },
   { id: 2, nome: "Texana 2", preco: 70.00, imagem: "img/texana2.jpg" },
   // Adicione mais produtos aqui
 ];
