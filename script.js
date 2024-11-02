@@ -30,27 +30,6 @@ function renderizarProdutos() {
         listaProdutos.appendChild(produtoDiv);
     });
 }
-
-function filtrarProdutos() {
-    const filtro = document.getElementById('filtro').value.toLowerCase();
-    const produtosFiltrados = produtos.filter(produto => produto.nome.toLowerCase().includes(filtro));
-    
-    const listaProdutos = document.getElementById('lista-produtos');
-    listaProdutos.innerHTML = '';
-
-    produtosFiltrados.forEach(produto => {
-        const produtoDiv = document.createElement('div');
-        produtoDiv.className = 'produto';
-        produtoDiv.innerHTML = `
-            <img src="${produto.img}" alt="${produto.nome}">
-            <h3>${produto.nome}</h3>
-            <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
-            <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
-        `;
-        listaProdutos.appendChild(produtoDiv);
-    });
-}
-
 function adicionarAoCarrinho(id) {
     const produto = produtos.find(prod => prod.id === id);
     carrinho.push(produto);
