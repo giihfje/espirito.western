@@ -5,8 +5,8 @@ body {
 }
 
 header {
-	background-color: #333;
-	color: #fff;
+	background-color: #070505;
+	color: #471d1d;
 	padding: 20px;
 	text-align: center;
 }
@@ -24,7 +24,7 @@ nav li {
 }
 
 nav a {
-	color: #fff;
+	color: #342222;
 	text-decoration: none;
 }
 
@@ -36,7 +36,7 @@ main {
 }
 
 section {
-	background-color: #f7f7f7;
+	background-color: #1e1c1c;
 	padding: 20px;
 	margin-bottom: 20px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -49,7 +49,7 @@ h1, h2 {
 
 footer {
 	background-color: #333;
-	color: #fff;
+	color: #130808;
 	padding: 10px;
 	text-align: center;
 	clear: both;
