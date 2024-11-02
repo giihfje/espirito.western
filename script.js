@@ -4,57 +4,48 @@ const produtos = [
     { id: 3, nome: 'Texana 3', preco: 350, img: './imagem/image copy.png' }
 ];
 
-let totalCarrinho = 0;
-let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
-document.addEventListener('DOMContentLoaded', () => {
-    renderizarProdutos();
-    atualizarCarrinho();
-    document.getElementById('finalizar-compra').addEventListener('click', finalizarCompra);
-});
-
-function renderizarProdutos() {
-    const listaProdutos = document.getElementById('lista-produtos');
-    listaProdutos.innerHTML = '';
-
-    produtos.forEach(produto => {
-        const produtoDiv = document.createElement('div');
-        produtoDiv.className = 'produto';
-        produtoDiv.innerHTML = `
-            <img src="${produto.img}" alt="${produto.nome}">
-            <h3>${produto.nome}</h3>
-            <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
-            <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
-        `;
-        listaProdutos.appendChild(produtoDiv);
-    });
-}
-
 function adicionarAoCarrinho(id) {
-    const produto = produtos.find(prod => prod.id === id);
+    let produto = produtos.find(p => (link) === id);
     carrinho.push(produto);
-    totalCarrinho += produto.preco;
+    alert(`Produto adicionado ao carrinho: ${produto.nome}`);
+    atuali
+    zarCarrinho();
+  }
 
-    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  function removerDoCarrinho(id) {
+    let index = carrinho.findIndex(p => (link) === id);
+    carrinho.splice(index, 1);
     atualizarCarrinho();
-}
+  }
 
-function atualizarCarrinho() {
-    const listaCarrinho = document.getElementById('lista-carrinho');
-    listaCarrinho.innerHTML = '';
+  function atualizarCarrinho() {
+    let total = 0;
     carrinho.forEach(produto => {
-        const itemCarrinho = document.createElement('li');
-        itemCarrinho.textContent = `${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
-        listaCarrinho.appendChild(itemCarrinho);
+      total += produto.preco;
     });
-    document.getElementById('total').textContent = `Total: R$ ${totalCarrinho.toFixed(2)}`;
-    document.getElementById('contador-carrinho').textContent = carrinho.length;
-}
-
-function finalizarCompra() {
-    alert('Compra finalizada! Obrigado pela sua compra!');
+    document.getElementById("total").innerText = `Total: R$ ${total.toFixed(2)}`;
+    document.getElementById("carrinho").innerHTML = "";
+    carrinho.forEach(produto => {
+      let item = document.createElement("li");
+      item.innerText = `${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
+      document.getElementById("carrinho").appendChild(item);
+    });
+  }
+  function finalizarCompra() {
+    alert("Compra finalizada com sucesso!");
     carrinho = [];
-    totalCarrinho = 0;
-    localStorage.removeItem('carrinho');
     atualizarCarrinho();
-}
+  }
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    produtos.forEach(produto => {
+      let item = document.createElement("div");
+      item.innerHTML = `
+        <img src="${produto.imagem}" alt="${produto.nome}">
+        <h2>${produto.nome}</h2>
+        <p>R$ ${produto.preco.toFixed(2)}</p>
+        <button onclick="adicionarAoCarrinho(${(link)})">Adicionar ao carrinho </button>
+      `;
+      document.getElementById("produtos").appendChild(item);
+    });
+  });  
