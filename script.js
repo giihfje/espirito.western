@@ -18,13 +18,6 @@ function adicionarAoCarrinho(id) {
     carrinho.forEach(produto => {
       total += produto.preco;
     });
-    document.getElementById("total").innerText = `Total: R$ ${total.toFixed(2)}`;
-    document.getElementById("carrinho").innerHTML = "";
-    carrinho.forEach(produto => {
-      let item = document.createElement("li");
-      item.innerText = `${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
-      document.getElementById("carrinho").appendChild(item);
-    });
   }
   function finalizarCompra() {
     alert("Compra finalizada com sucesso!");
