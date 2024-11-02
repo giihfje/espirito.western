@@ -6,51 +6,7 @@ body {
 
 header {
 	background-color: #070505;
-	color: #471d1d;
+	color: #d6cab7;
 	padding: 20px;
 	text-align: center;
-}
-
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: space-between;
-}
-
-nav li {
-	margin-right: 20px;
-}
-
-nav a {
-	color: #342222;
-	text-decoration: none;
-}
-
-main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 20px;
-}
-
-section {
-	background-color: #1e1c1c;
-	padding: 20px;
-	margin-bottom: 20px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-	color: #333;
-	margin-top: 0;
-}
-
-footer {
-	background-color: #333;
-	color: #130808;
-	padding: 10px;
-	text-align: center;
-	clear: both;
 }
