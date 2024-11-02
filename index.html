@@ -31,23 +31,30 @@
 				<div class="produto">
 					<img src="./imagem/image.png" alt="Texana 1">
 					<h3>Texana 1</h3>
-					<p>R$ 240,00</p>
-					<button>Comprar</button>
+            <p>Preço: R$ 250,00</p>
+            <button onclick="adicionarAoCarrinho('Texana 1', 250)">Adicionar ao Carrinho</button>
 				</div>
 				<div class="produto">
 					<img src="./imagem/texana_feminina.jpg" alt="Texana 2">
 					<h3>Texana 2</h3>
-					<p>R$ 270,00</p>
-					<button>Comprar</button>
+            <p>Preço: R$ 270,00</p>
+            <button onclick="adicionarAoCarrinho('Texana 2', 270)">Adicionar ao Carrinho</button>
 				</div>
 				<div class="produto">
 					<img src="./imagem/image copy.png" alt="Texana 3">
 					<h3>Texana 3</h3>
-					<p>R$ 390,00</p>
-					<button>Comprar</button>
+            <p>Preço: R$ 350,00</p>
+            <button onclick="adicionarAoCarrinho('Texana 3', 350)">Adicionar ao Carrinho</button>
 				</div>
 			</div>
 		</section>
+
+		<section id="carrinho">
+			<h2>Carrinho de Compras</h2>
+			<ul id="lista-carrinho"></ul>
+			<p id="total">Total: R$ 0,00</p>
+		</section>
+
 		<section id="contato">
 			<h2>Contato</h2>
 			<p>Entre em contato conosco:</p>
@@ -57,8 +64,12 @@
 			</ul>
 		</section>
 	</main>
+	
 	<footer>
 		<p>&copy; 2024 Texanas Online</p>
 	</footer>
+
+	<script src="script.js"></script>
+	
 </body>
 </html>
