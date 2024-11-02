@@ -32,15 +32,4 @@ function adicionarAoCarrinho(id) {
     atualizarCarrinho();
   }
   
-  document.addEventListener("DOMContentLoaded", function() {
-    produtos.forEach(produto => {
-      let item = document.createElement("div");
-      item.innerHTML = `
-        <img src="${produto.imagem}" alt="${produto.nome}">
-        <h2>${produto.nome}</h2>
-        <p>R$ ${produto.preco.toFixed(2)}</p>
-        <button onclick="adicionarAoCarrinho(${(link)})">Adicionar ao carrinho </button>
-      `;
-      document.getElementById("produtos").appendChild(item);
-    });
-  });  
+  
