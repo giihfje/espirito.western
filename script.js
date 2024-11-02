@@ -10,7 +10,6 @@ let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 document.addEventListener('DOMContentLoaded', () => {
     renderizarProdutos();
     atualizarCarrinho();
-    document.getElementById('filtro').addEventListener('input', filtrarProdutos);
     document.getElementById('finalizar-compra').addEventListener('click', finalizarCompra);
 });
 
@@ -30,6 +29,7 @@ function renderizarProdutos() {
         listaProdutos.appendChild(produtoDiv);
     });
 }
+
 function adicionarAoCarrinho(id) {
     const produto = produtos.find(prod => prod.id === id);
     carrinho.push(produto);
