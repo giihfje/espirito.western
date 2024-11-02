@@ -1,80 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-	<title>Espírito Western</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texanas da Fazenda</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<header>
-        <header class="cabecalho">
-            <img src="./imagem/Espírito Western.png" alt="Espírito Western">
-		<nav>
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#produtos">Produtos</a></li>
-				<li><a href="#contato">Contato</a></li>
-			</ul>
-		</nav>
+    <header>
+        <h1>Texanas da Fazenda</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-		<div class="carrinho">
-            <a href="#carrinho">🛒 Carrinho (<span id="contador-carrinho">0</span>)</a>
-        </div>
-	
-	</header>
-	<main>
-		<section id="home">
-			<h1>Bem-vindo à Espírito western!</h1>
-			<p>Caminhe com atitude, viva com liberdade - texanas!</p>
-   
-			<button>Compre Agora!</button>
-		</section>
-		<section id="produtos">
-			<h2>Produtos</h2>
-			<div class="produtos">
-				<div class="produto">
-					<img src="./imagem/image.png" alt="Texana 1">
-					<h3>Texana 1</h3>
-            <p>Preço: R$ 250,00</p>
-            <button onclick="adicionarAoCarrinho('Texana 1', 250)">Adicionar ao Carrinho</button>
-				</div>
-				<div class="produto">
-					<img src="./imagem/texana_feminina.jpg" alt="Texana 2">
+    <main>
+        <section id="produtos">
+            <h2>Nossas Texanas</h2>
+            <div class="produto">
+                <img src="./imagem/texana_feminina.jpg" alt="Texana 2">
 					<h3>Texana 2</h3>
             <p>Preço: R$ 270,00</p>
-            <button onclick="adicionarAoCarrinho('Texana 2', 270)">Adicionar ao Carrinho</button>
-				</div>
-				<div class="produto">
-					<img src="./imagem/image copy.png" alt="Texana 3">
+                <button class="comprar-btn" data-nome="Texana Modelo 1">Comprar</button>
+            </div>
+            <div class="produto">
+                <img src="./imagem/image copy.png" alt="Texana 3">
 					<h3>Texana 3</h3>
             <p>Preço: R$ 350,00</p>
-            <button onclick="adicionarAoCarrinho('Texana 3', 350)">Adicionar ao Carrinho</button>
-				</div>
-			</div>
-		</section>
+                <button class="comprar-btn" data-nome="Texana Modelo 2">Comprar</button>
+            </div>
+			<div class="produto">
+                <img src="./imagem/image.png" alt="Texana 1">
+					<h3>Texana 1</h3>
+            <p>Preço: R$ 250,00</p>
+                <button class="comprar-btn" data-nome="Texana Modelo 2">Comprar</button>
+            </div>
+        
+        </section>
 
-		<section id="carrinho">
-			<h2>Carrinho de Compras</h2>
-			<ul id="lista-carrinho"></ul>
-			<p id="total">Total: R$ 0,00</p>
-			<button id="finalizar-compra">Finalizar Compra</button>
-		</section>
-		
-		<section id="contato">
-			<p>Entre em contato conosco:</p>
-			<ul>
-				<li>Telefone: (42) 9934-6798</li>
-				<li>E-mail: espíritowestern@gmail.com</li>
-			</ul>
-		</section>
-	</main>
-	
-	<footer>
-		<p>&copy; 2024 Texanas Online</p>
-	</footer>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Conheça nossa história e a tradição de fazer texanas de qualidade.</p>
+        </section>
 
-	<script src="script.js"></script>
-	
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="contato-form">
+                <input type="email" placeholder="espíritowestern@gmail.com" required>
+                <textarea placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Texanas da Fazenda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

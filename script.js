@@ -1,28 +1,15 @@
 
-function adicionarAoCarrinho(id) {
-    let produto = produtos.find(p => (link) === id);
-    carrinho.push(produto);
-    alert(`Produto adicionado ao carrinho: ${produto.nome}`);
-    atuali
-    zarCarrinho();
-  }
+document.querySelectorAll('.comprar-btn').forEach(button => {
+  button.addEventListener('click', () => {
+      const nomeProduto = button.getAttribute('data-nome');
+      alert(`Você comprou: ${nomeProduto}`);
+  });
+});
 
-  function removerDoCarrinho(id) {
-    let index = carrinho.findIndex(p => (link) === id);
-    carrinho.splice(index, 1);
-    atualizarCarrinho();
-  }
+document.getElementById('contato-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  alert('Mensagem enviada! Obrigado por entrar em contato.');
+  event.target.reset();
+});
 
-  function atualizarCarrinho() {
-    let total = 0;
-    carrinho.forEach(produto => {
-      total += produto.preco;
-    });
-  }
-  function finalizarCompra() {
-    alert("Compra finalizada com sucesso!");
-    carrinho = [];
-    atualizarCarrinho();
-  }
-  
   
