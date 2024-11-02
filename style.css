@@ -10,6 +10,9 @@ header {
     background: #333;
     color: #fff;
     padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav ul {
@@ -27,15 +30,32 @@ header nav ul li a {
     text-decoration: none;
 }
 
+.carrinho {
+    font-size: 1.2em;
+}
+
 section {
     padding: 20px;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .produto {
     border: 1px solid #ccc;
     padding: 15px;
-    margin: 10px 0;
+    margin: 10px;
     background: #fff;
+    flex: 1 1 calc(33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
