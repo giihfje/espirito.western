@@ -1,8 +1,3 @@
-const produtos = [
-    { id: 1, nome: 'Texana 1', preco: 250, img: './imagem/image.png' },
-    { id: 2, nome: 'Texana 2', preco: 270, img: './imagem/texana_feminina.jp' },
-    { id: 3, nome: 'Texana 3', preco: 350, img: './imagem/image copy.png' }
-];
 
 function adicionarAoCarrinho(id) {
     let produto = produtos.find(p => (link) === id);
