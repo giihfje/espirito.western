@@ -12,12 +12,16 @@ body {
     line-height: 1.6;
 }
 
-/* Cabeçalho */
 header {
     background-color: #0e0a0a;
     color: #fff;
     padding: 15px 0;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
 }
 
 header h1 {
