@@ -1,8 +1,8 @@
 // Produtos disponíveis
 const produtos = [
-  { id: 1, nome: "Bota Texana Preta", cor: "preta", preco: 299.99, imagem: "img/bota-preta.jpg" },
-  { id: 2, nome: "Bota Texana Marrom", cor: "marrom", preco: 349.99, imagem: "img/bota-marrom.jpg" },
-  { id: 3, nome: "Bota Texana Azul", cor: "azul", preco: 379.99, imagem: "img/bota-azul.jpg" },
+  { id: 1, nome: "Bota Texana 1", cor: "preta", preco: 299.99, imagem: "./imagem/texana_feminina.jpg" },
+  { id: 2, nome: "Bota Texana 2", cor: "marrom", preco: 349.99, imagem: "./imagem/image.png" },
+  { id: 3, nome: "Bota Texana 3", cor: "azul", preco: 379.99, imagem: "./imagem/image copy.png" },
 ];
 
 // Carrinho de compras
