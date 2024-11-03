@@ -17,11 +17,6 @@ header {
     color: #fff;
     padding: 15px 0;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
 }
 
 header h1 {
