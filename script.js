@@ -1,50 +1,82 @@
-// Lista de produtos com várias botas texanas
+// Produtos disponíveis
 const produtos = [
-  { nome: 'Bota Texana Preta', preco: 299, imagem: 'bota1.jpg' },
-  { nome: 'Bota Texana Marrom', preco: 329, imagem: 'bota2.jpg' },
-  { nome: 'Bota Texana Azul', preco: 359, imagem: 'bota3.jpg' },
-  { nome: 'Bota Texana Vermelha', preco: 389, imagem: 'bota4.jpg' },
-  { nome: 'Bota Texana Branca', preco: 279, imagem: 'bota5.jpg' },
-  { nome: 'Bota Texana Cinza', preco: 315, imagem: 'bota6.jpg' }
+  { id: 1, nome: "Bota Texana Preta", cor: "preta", preco: 299.99, imagem: "img/bota-preta.jpg" },
+  { id: 2, nome: "Bota Texana Marrom", cor: "marrom", preco: 349.99, imagem: "img/bota-marrom.jpg" },
+  { id: 3, nome: "Bota Texana Azul", cor: "azul", preco: 379.99, imagem: "img/bota-azul.jpg" },
 ];
 
+// Carrinho de compras
 let carrinho = [];
-let total = 0;
 
-// Função para carregar os produtos na página
-function carregarProdutos() {
-  const produtosLista = document.getElementById('produtos-lista');
-  produtos.forEach(produto => {
-      const divProduto = document.createElement('div');
-      divProduto.classList.add('produto');
-      divProduto.innerHTML = `
+// Exibe os produtos
+function exibirProdutos(produtosFiltrados = produtos) {
+  const lista = document.getElementById("produtos-lista");
+  lista.innerHTML = "";
+  produtosFiltrados.forEach(produto => {
+      const item = document.createElement("div");
+      item.className = "produto";
+      item.innerHTML = `
           <img src="${produto.imagem}" alt="${produto.nome}">
           <h2>${produto.nome}</h2>
           <p>R$ ${produto.preco.toFixed(2)}</p>
-          <button onclick="adicionarAoCarrinho('${produto.nome}', ${produto.preco})">Comprar</button>
+          <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
       `;
-      produtosLista.appendChild(divProduto);
+      lista.appendChild(item);
   });
 }
 
-// Função para adicionar itens ao carrinho
-function adicionarAoCarrinho(nome, preco) {
-  carrinho.push({ nome, preco });
-  total += preco;
+// Adiciona um produto ao carrinho
+function adicionarAoCarrinho(produtoId) {
+  const produto = produtos.find(p => p.id === produtoId);
+  const itemCarrinho = carrinho.find(item => item.id === produtoId);
+  if (itemCarrinho) {
+      itemCarrinho.quantidade++;
+  } else {
+      carrinho.push({ ...produto, quantidade: 1 });
+  }
   atualizarCarrinho();
 }
 
-
-// Função para finalizar a compra
-function finalizarCompra() {
-  if (carrinho.length === 0) {
-      alert('O carrinho está vazio!');
-  } else {
-      carrinho = [];
-      total = 0;
-      atualizarCarrinho();
-  }
+// Atualiza o carrinho e o total
+function atualizarCarrinho() {
+  const lista = document.getElementById("carrinho-itens");
+  lista.innerHTML = "";
+  let total = 0;
+  carrinho.forEach(item => {
+      total += item.preco * item.quantidade;
+      const li = document.createElement("li");
+      li.innerHTML = `
+          ${item.nome} - ${item.quantidade} x R$ ${item.preco.toFixed(2)}
+          <button onclick="removerDoCarrinho(${item.id})">Remover</button>
+      `;
+      lista.appendChild(li);
+  });
+  document.getElementById("total").innerText = total
 }
 
-// Carrega os produtos ao carregar a página
-window.onload = carregarProdutos;
+// Remove um produto do carrinho
+function removerDoCarrinho(produtoId) {
+  carrinho = carrinho.filter(item => item.id !== produtoId);
+  atualizarCarrinho();
+}
+
+// Filtra produtos
+function filtrarProdutos() {
+  const cor = document.getElementById("filtro-cor").value;
+  const termoPesquisa = document.getElementById("pesquisa-produto").value.toLowerCase();
+  const produtosFiltrados = produtos.filter(p =>
+      (cor === "" || p.cor === cor) &&
+      (termoPesquisa === "" || p.nome.toLowerCase().includes(termoPesquisa))
+  );
+  exibirProdutos(produtosFiltrados);
+}
+
+// Finaliza compra
+function finalizarCompra() {
+  alert("Compra finalizada!");
+  carrinho = [];
+  atualizarCarrinho();
+}
+
+// Inicialização
+exibirProdutos();

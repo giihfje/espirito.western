@@ -1,67 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-	<title>Espírito Western</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espírito Western - Loja de Botas Texanas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<h1>Bem-vindo à Espírito western!</h1>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section id="home">
-			<p>Caminhe com atitude, viva com liberdade - texanas!</p>
-		</section>
-		<section id="produtos">
-		
-			<div class="produtos">
-				<div class="produto">
-					<img src="./imagem/image.png" alt="Texana 1">
-					<h3>Texana 1</h3>
-					<p>R$ 240,00</p>
-					<button>Comprar</button>
-				</div>
-				<div class="produto">
-					<img src="./imagem/image copy.png" alt="Texana 2">
-					<h3>Texana 2</h3>
-					<p>R$ 270,00</p>
-					<button>Comprar</button>
-				</div>
-				<div class="produto">
-					<img src="./imagem/texana_feminina.jpg" alt="Texana 3">
-					<h3>Texana 3</h3>
-					<p>R$ 290,00</p>
-					<button>Comprar</button>
-				</div>
-			</div>
-		</section>
-		<section id="contato">
-			<p>Entre em contato conosco:</p>
-			<ul>
-				<li>Telefone: (42) 9934-6798</li>
-				<li>E-mail: espíritowestern@gmail.com</li>
-			</ul>
-		</section>
 
-        <section class="carrinho">
-            <h2>Carrinho de Compras</h2>
-            <ul id="carrinho-itens"></ul>
-            <p id="total">Total: R$ 0,00</p>
-            <button onclick="finalizarCompra()">Finalizar Compra</button>
-        </section>
-        
-	</main>
-	<footer>
-		<p>&copy; 2024 Texanas Online</p>
-	</footer>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Espírito Western</h1>
+        <p>Explore o estilo autêntico do Oeste com nossas botas texanas</p>
+    </header>
+
+    <!-- Filtros e Pesquisa -->
+    <section class="filtros">
+        <label for="filtro-cor">Filtrar por Cor:</label>
+        <select id="filtro-cor" onchange="filtrarProdutos()">
+            <option value="">Todas</option>
+            <option value="preta">Preta</option>
+            <option value="marrom">Marrom</option>
+            <option value="azul">Azul</option>
+        </select>
+
+        <label for="pesquisa-produto">Pesquisar:</label>
+        <input type="text" id="pesquisa-produto" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
+    </section>
+
+    <!-- Lista de Produtos -->
+    <section class="produtos" id="produtos-lista">
+        <!-- Produtos carregados dinamicamente -->
+    </section>
+
+    <!-- Carrinho de Compras -->
+    <section class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="carrinho-itens" class="carrinho-itens"></ul>
+        <p id="total" class="total">Total: R$ 0,00</p>
+        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
 
     <script src="script.js"></script>
-
 </body>
 </html>
