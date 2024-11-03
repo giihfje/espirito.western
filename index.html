@@ -1,64 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texanas da Fazenda</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Loja de Botas Texanas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Texanas da Fazenda</h1>
-        <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        <h1>Loja de Botas Texanas</h1>
+        <p>Explore nossa coleção exclusiva de botas texanas!</p>
     </header>
 
     <main>
-        <section id="produtos">
-            <h2>Nossas Texanas</h2>
-            <div class="produto">
-                <img src="./imagem/texana_feminina.jpg" alt="Texana 2">
-					<h3>Texana 2</h3>
-            <p>Preço: R$ 270,00</p>
-                <button class="comprar-btn" data-nome="Texana Modelo 1">Comprar</button>
-            </div>
-            <div class="produto">
-                <img src="./imagem/image copy.png" alt="Texana 3">
-					<h3>Texana 3</h3>
-            <p>Preço: R$ 350,00</p>
-                <button class="comprar-btn" data-nome="Texana Modelo 2">Comprar</button>
-            </div>
-			<div class="produto">
-                <img src="./imagem/image.png" alt="Texana 1">
+        
+	
+	</header>
+	<main>
+		<section id="home">
+			<h1>Bem-vindo à Espírito western!</h1>
+			<p>Caminhe com atitude, viva com liberdade - texanas!</p>
+   
+			<button>Compre Agora!</button>
+		</section>
+		<section id="produtos">
+			<h2>Produtos</h2>
+			<div class="produtos">
+					<img src="./imagem/image.png" alt="Texana 1">
 					<h3>Texana 1</h3>
             <p>Preço: R$ 250,00</p>
-                <button class="comprar-btn" data-nome="Texana Modelo 2">Comprar</button>
-            </div>
-        
-        </section>
-
-        <section id="sobre">
-            <h2>Sobre Nós</h2>
-            <p>Conheça nossa história e a tradição de fazer texanas de qualidade.</p>
-        </section>
-
-        <section id="contato">
-            <h2>Contato</h2>
-            <form id="contato-form">
-                <input type="email" placeholder="espíritowestern@gmail.com" required>
-                <textarea placeholder="Sua Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+            <button onclick="adicionarAoCarrinho('Texana 1', 250)">Adicionar ao Carrinho</button>
+				</div>
+				<div class="produto">
+					<img src="./imagem/texana_feminina.jpg" alt="Texana 2">
+					<h3>Texana 2</h3>
+            <p>Preço: R$ 270,00</p>
+            <button onclick="adicionarAoCarrinho('Texana 2', 270)">Adicionar ao Carrinho</button>
+				</div>
+				<div class="produto">
+					<img src="./imagem/image copy.png" alt="Texana 3">
+					<h3>Texana 3</h3>
+            <p>Preço: R$ 350,00</p>
+            <button onclick="adicionarAoCarrinho('Texana 3', 350)">Adicionar ao Carrinho</button>
+				</div>
+			</div>
+		</section class="carrinho">
+            <h2>Carrinho de Compras</h2>
+            <ul id="carrinho-itens"></ul>
+            <p id="total">Total: R$ 0,00</p>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Texanas da Fazenda. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Loja de Botas Texanas - Todos os direitos reservados</p>
     </footer>
 
     <script src="script.js"></script>
