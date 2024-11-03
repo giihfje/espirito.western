@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Botas Texanas</title>
-    <link rel="stylesheet" href="style.css">
+	<title>Espírito Western</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Loja de Botas Texanas</h1>
-        <p>Explore nossa coleção exclusiva de botas texanas!</p>
-    </header>
-
-    <main>
-        
-	
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#produtos">Produtos</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+		</nav>
 	</header>
 	<main>
 		<section id="home">
@@ -26,36 +26,41 @@
 		<section id="produtos">
 			<h2>Produtos</h2>
 			<div class="produtos">
-					<img src="./imagem/image.png" alt="Texana 1">
+				<div class="produto">
+					<img src="texana1.jpg" alt="Texana 1">
 					<h3>Texana 1</h3>
-            <p>Preço: R$ 250,00</p>
-            <button onclick="adicionarAoCarrinho('Texana 1', 250)">Adicionar ao Carrinho</button>
+					<p>R$ 240,00</p>
+					<button>Comprar</button>
 				</div>
 				<div class="produto">
-					<img src="./imagem/texana_feminina.jpg" alt="Texana 2">
+					<img src="texana2.jpg" alt="Texana 2">
 					<h3>Texana 2</h3>
-            <p>Preço: R$ 270,00</p>
-            <button onclick="adicionarAoCarrinho('Texana 2', 270)">Adicionar ao Carrinho</button>
+					<p>R$ 270,00</p>
+					<button>Comprar</button>
 				</div>
 				<div class="produto">
-					<img src="./imagem/image copy.png" alt="Texana 3">
+					<img src="texana3.jpg" alt="Texana 3">
 					<h3>Texana 3</h3>
-            <p>Preço: R$ 350,00</p>
-            <button onclick="adicionarAoCarrinho('Texana 3', 350)">Adicionar ao Carrinho</button>
+					<p>R$ 390,00</p>
+					<button>Comprar</button>
 				</div>
 			</div>
-		</section class="carrinho">
-            <h2>Carrinho de Compras</h2>
-            <ul id="carrinho-itens"></ul>
-            <p id="total">Total: R$ 0,00</p>
-            <button onclick="finalizarCompra()">Finalizar Compra</button>
-        </section>
-    </main>
+		</section>
+		<section id="contato">
+			<h2>Contato</h2>
+			<p>Entre em contato conosco:</p>
+			<ul>
+				<li>Telefone: (42) 9934-6798</li>
+				<li>E-mail: espíritowestern@gmail.com</li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2024 Texanas Online</p>
+	</footer>
 
-    <footer>
-        <p>&copy; 2024 Loja de Botas Texanas - Todos os direitos reservados</p>
-    </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
