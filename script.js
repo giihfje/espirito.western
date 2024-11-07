@@ -1,14 +1,16 @@
-// Produtos disponíveis
 const produtos = [
   { id: 1, nome: "Bota Texana 1", cor: "marrom", preco: 299.99, imagem: "./imagem/texana_feminina.jpg" },
   { id: 2, nome: "Bota Texana 2", cor: "brilho", preco: 349.99, imagem: "./imagem/image.png" },
   { id: 3, nome: "Bota Texana 3", cor: "brilho", preco: 379.99, imagem: "./imagem/image copy.png" },
+  { id: 4, nome: "Bota Texana 4", cor: "Infantil", preco: 100.00, image:},
+  { id: 5, nome: "Bota Texana 5", cor: "Infantil", preco: 90.00, image:},
+  { id: 6, nome: "Bota Texana 6", cor: "Infantil", preco: 300.87, image:},
+  { id: 7, nome: "Bota Texana 7", cor: "Infantil", preco: 95.98, image:},
+  { id: 8, nome: "Bota Texana 8", cor: "Infantil", preco: 89.90, image:},
+  { id: 9, nome: "Bota Texana 9", cor: "Infantil", preco: 120.40, image:},
 ];
 
-// Carrinho de compras
 let carrinho = [];
-
-// Exibe os produtos
 function exibirProdutos(produtosFiltrados = produtos) {
   const lista = document.getElementById("produtos-lista");
   lista.innerHTML = "";
@@ -24,8 +26,6 @@ function exibirProdutos(produtosFiltrados = produtos) {
       lista.appendChild(item);
   });
 }
-
-// Adiciona um produto ao carrinho
 function adicionarAoCarrinho(produtoId) {
   const produto = produtos.find(p => p.id === produtoId);
   const itemCarrinho = carrinho.find(item => item.id === produtoId);
@@ -36,8 +36,6 @@ function adicionarAoCarrinho(produtoId) {
   }
   atualizarCarrinho();
 }
-
-// Atualiza o carrinho e o total
 function atualizarCarrinho() {
   const lista = document.getElementById("carrinho-itens");
   lista.innerHTML = "";
@@ -53,14 +51,10 @@ function atualizarCarrinho() {
   });
   document.getElementById("total").innerText = total
 }
-
-// Remove um produto do carrinho
 function removerDoCarrinho(produtoId) {
   carrinho = carrinho.filter(item => item.id !== produtoId);
   atualizarCarrinho();
 }
-
-// Filtra produtos
 function filtrarProdutos() {
   const cor = document.getElementById("filtro-cor").value;
   const termoPesquisa = document.getElementById("pesquisa-produto").value.toLowerCase();
@@ -70,13 +64,9 @@ function filtrarProdutos() {
   );
   exibirProdutos(produtosFiltrados);
 }
-
-// Finaliza compra
 function finalizarCompra() {
   alert("Compra finalizada!");
   carrinho = [];
   atualizarCarrinho();
 }
-
-// Inicialização
 exibirProdutos();
