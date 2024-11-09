@@ -28,8 +28,8 @@ header h1 {
     gap: 20px;
     padding: 15px 20px;
     justify-content: center;
-    background-color: #405c40;
-    border-bottom: 1px solid #778b5f;
+    background-color: #f2fdf2;
+    border-bottom: 1px solid #151515;
 }
 
 .filtros select,

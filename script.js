@@ -2,12 +2,12 @@ const produtos = [
   { id: 1, nome: "Bota Texana 1", cor: "marrom", preco: 299.99, imagem: "./imagem/texana_feminina.jpg" },
   { id: 2, nome: "Bota Texana 2", cor: "brilho", preco: 349.99, imagem: "./imagem/image.png" },
   { id: 3, nome: "Bota Texana 3", cor: "brilho", preco: 379.99, imagem: "./imagem/image copy.png" },
-  { id: 4, nome: "Bota Texana 4", cor: "Infantil", preco: 100.00, imagem:"./imagem copy/_.jpeg"},
-  { id: 5, nome: "Bota Texana 5", cor: "Infantil", preco: 90.00, imagem:"./imagem copy/image copy 2.png"},
-  { id: 6, nome: "Bota Texana 6", cor: "Infantil", preco: 88.87, imagem:"./imagem copy/Footwear (1).jpeg"},
-  { id: 7, nome: "Bota Texana 7", cor: "Infantil", preco: 95.98, imagem:"./imagem copy/Bota Texana Infantil Bordada Zíper Antiderrapante Conforto - Free Jump.jpeg"},
-  { id: 8, nome: "Bota Texana 8", cor: "Infantil", preco: 89.90, imagem:"./imagem copy/Botas vaqueras niños niñas bebés primeros pasos unisex con plataforma botines infantil moda café marrón negra 12mx-21mx ecopiel elegante cowbow chelsea flores detalles de calidad.jpeg"},
-  { id: 9, nome: "Bota Texana 9", cor: "Infantil", preco: 120.40, imagem:"./imagem copy/Footwear.jpeg"},
+  { id: 4, nome: "Bota Texana 4", cor: "infantil", preco: 100.00, imagem:"./imagem copy/_.jpeg"},
+  { id: 5, nome: "Bota Texana 5", cor: "infantil", preco: 90.00, imagem:"./imagem copy/image copy 2.png"},
+  { id: 6, nome: "Bota Texana 6", cor: "infantil", preco: 88.87, imagem:"./imagem copy/Footwear (1).jpeg"},
+  { id: 7, nome: "Bota Texana 7", cor: "infantil", preco: 95.98, imagem:"./imagem copy/Bota Texana Infantil Bordada Zíper Antiderrapante Conforto - Free Jump.jpeg"},
+  { id: 8, nome: "Bota Texana 8", cor: "infantil", preco: 89.90, imagem:"./imagem copy/Botas vaqueras niños niñas bebés primeros pasos unisex con plataforma botines infantil moda café marrón negra 12mx-21mx ecopiel elegante cowbow chelsea flores detalles de calidad.jpeg"},
+  { id: 9, nome: "Bota Texana 9", cor: "infantil", preco: 120.40, imagem:"./imagem copy/Footwear.jpeg"},
 ];
 
 let carrinho = [];
