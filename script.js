@@ -1,19 +1,19 @@
 const produtos = [
   
-  { id: 1, nome: "Bota Texana 1", cor: "marrom", preco: 299.99, imagem: "./imagem/texana_feminina.jpg" },
-  { id: 1, nome: "Bota Texana 1", cor: "marrom", preco: 499.99, imagem: "./LANÇAMENTO 7M BOOTS  Novo modelo disponível para você aqui na 7M Boots_ Bota bruta é aqui!😍🤠👢.jpeg" },
-  { id: 1, nome: "Bota Texana 1", cor: "marrom", preco: 599.99, imagem: "./imagem copy/6374f0e1-a988-41ce-97d1-5318b5a7163b.jpeg" },
-  { id: 1, nome: "Bota Texana 1", cor: "marrom", preco: 549.99, imagem: "./imagem copy/6779fea4-a658-4557-a388-69ab4506b6c1.jpeg" },
-  { id: 1, nome: "Bota Texana 1", cor: "marrom", preco: 569.99, imagem: "./imagem copy/Botas Cinceladas Negras De Mujer - 8_5 _ B _ Black.jpeg" },
-  { id: 1, nome: "Bota Texana 1", cor: "marrom", preco: 899.99, imagem: "./imagem copy/Botas Cinceladas Para Mujer - 7 _ B _ Brown.jpeg" },
-  { id: 2, nome: "Bota Texana 2", cor: "brilho", preco: 349.99, imagem: "./imagem/image.png" },
-  { id: 3, nome: "Bota Texana 3", cor: "brilho", preco: 379.99, imagem: "./imagem/image copy.png" },
-  { id: 4, nome: "Bota Texana 4", cor: "infantil", preco: 100.00, imagem:"./imagem copy/_.jpeg"},
-  { id: 5, nome: "Bota Texana 5", cor: "infantil", preco: 90.00, imagem:"./imagem copy/image copy 2.png"},
-  { id: 6, nome: "Bota Texana 6", cor: "infantil", preco: 88.87, imagem:"./imagem copy/Footwear (1).jpeg"},
-  { id: 7, nome: "Bota Texana 7", cor: "infantil", preco: 95.98, imagem:"./imagem copy/Bota Texana Infantil Bordada Zíper Antiderrapante Conforto - Free Jump.jpeg"},
-  { id: 8, nome: "Bota Texana 8", cor: "infantil", preco: 89.90, imagem:"./imagem copy/Botas vaqueras niños niñas bebés primeros pasos unisex con plataforma botines infantil moda café marrón negra 12mx-21mx ecopiel elegante cowbow chelsea flores detalles de calidad.jpeg"},
-  { id: 9, nome: "Bota Texana 9", cor: "infantil", preco: 120.40, imagem:"./imagem copy/Footwear.jpeg"},
+  { id: 1, nome: "Bota Texana Feminina", cor: "marrom", preco: 299.99, imagem: "./imagem/texana_feminina.jpg" },
+  { id: 1, nome: "Bota Texana Masculina", cor: "preto", preco: 499.99, imagem: "./LANÇAMENTO 7M BOOTS  Novo modelo disponível para você aqui na 7M Boots_ Bota bruta é aqui!😍🤠👢.jpeg" },
+  { id: 1, nome: "Bota Texana Feminina", cor: "preta", preco: 599.99, imagem: "./imagem copy/6374f0e1-a988-41ce-97d1-5318b5a7163b.jpeg" },
+  { id: 1, nome: "Bota Texana Feminina", cor: "brilho", preco: 549.99, imagem: "./imagem copy/6779fea4-a658-4557-a388-69ab4506b6c1.jpeg" },
+  { id: 1, nome: "Bota Texana Feminina", cor: "preta", preco: 569.99, imagem: "./imagem copy/Botas Cinceladas Negras De Mujer - 8_5 _ B _ Black.jpeg" },
+  { id: 1, nome: "Bota Texana Feminina", cor: "marrom", preco: 899.99, imagem: "./imagem copy/Botas Cinceladas Para Mujer - 7 _ B _ Brown.jpeg" },
+  { id: 2, nome: "Bota Texana Feminina", cor: "brilho", preco: 349.99, imagem: "./imagem/image.png" },
+  { id: 3, nome: "Bota Texana Feminina", cor: "brilho", preco: 379.99, imagem: "./imagem/image copy.png" },
+  { id: 4, nome: "Bota Texana Infantil", cor: "infantil", preco: 100.00, imagem:"./imagem copy/_.jpeg"},
+  { id: 5, nome: "Bota Texana Infantil", cor: "infantil", preco: 90.00, imagem:"./imagem copy/image copy 2.png"},
+  { id: 6, nome: "Bota Texana Infantil", cor: "infantil", preco: 88.87, imagem:"./imagem copy/Footwear (1).jpeg"},
+  { id: 7, nome: "Bota Texana Infantil", cor: "infantil", preco: 95.98, imagem:"./imagem copy/Bota Texana Infantil Bordada Zíper Antiderrapante Conforto - Free Jump.jpeg"},
+  { id: 8, nome: "Bota Texana Infantil", cor: "infantil", preco: 89.90, imagem:"./imagem copy/Botas vaqueras niños niñas bebés primeros pasos unisex con plataforma botines infantil moda café marrón negra 12mx-21mx ecopiel elegante cowbow chelsea flores detalles de calidad.jpeg"},
+  { id: 9, nome: "Bota Texana Infantil", cor: "infantil", preco: 120.40, imagem:"./imagem copy/Footwear.jpeg"},
 ];
 
 let carrinho = [];
