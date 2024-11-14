@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #494646;
-    color: #333;
+    background-color: #c5c3c3;
+    color: #f5f0f0;
     line-height: 1.6;
 }
 
@@ -68,11 +68,11 @@ header h1 {
 .produto h2 {
     font-size: 1.2em;
     margin: 10px 0;
-    color: #fefafa;
+    color: #020202;
 }
 
 .produto button {
-    background-color: #333;
+    background-color: #1e1d1d;
     color: #fff;
     padding: 10px 20px;
     border: none;
