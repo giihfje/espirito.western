@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #c5c3c3;
-    color: #f5f0f0;
+    background-color: #f56c6c;
+    color: #d30808;
     line-height: 1.6;
 }
 
@@ -50,7 +50,7 @@ header h1 {
 
 .produto {
     background-color: #221e1e;
-    border: 1px solid #060505;
+    border: 1px solid #d7c6c6;
     border-radius: 8px;
     width: 220px;
     padding: 15px;
