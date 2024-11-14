@@ -86,18 +86,6 @@ function filtrarProdutos() {
   );
   exibirProdutos(produtosFiltrados);
 }
-function adicionarAoCarrinho(produtoId){}
-  let tamanho = '';
-
-  if (produto === 'Bota de Cowboy') {
-      const selectElement = document.getElementById('tamanho-bota');
-      tamanho = selectElement.value;
-
-      if (!tamanho) {
-          alert('Por favor, selecione um tamanho antes de adicionar ao carrinho.');
-          return;
-      }
-  }
 function finalizarCompra() {
   alert("Compra finalizada!");
   carrinho = [];
