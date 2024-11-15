@@ -1,64 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espírito Western - Texanas</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espírito Western - Loja de Botas Texanas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Espírito Western</h1>
-    <nav>
-      <input type="text" id="search" placeholder="Pesquisar texanas...">
-      <button onclick="searchItems()">🔍</button>
-      <div id="cart-icon">
-        🛒 <span id="cart-count">0</span>
-      </div>
-    </nav>
-  </header>
+    <header>
+        <img src="imagem copy/western.png" alt="espiritowestern">  
+        <p>Bem-vindo a Espírito Western!</p>
+        <p>Caminhe com atitude, viva com liberdade-texanas!</p>
+    </header>
+    <section class="filtros">
+        <label for="filtro-cor">Filtrar por Cor:</label>
+        <select id="filtro-cor" onchange="filtrarProdutos()">
+            <option value="">Todas</option>
+            <option value="marrom">Marrom</option>
+            <option value="brilho">Brilho</option>
+            <option value="azul">Azul</option>
+            <option value="infantil">Infantil</option>
+            <option value="branca">Branca</option>
+            <option value="preta">Preta</option>
+        </select>
 
-  <!-- Galeria de Produtos -->
-  <section class="product-gallery">
-    <div class="product" data-name="Texana Marrom" data-price="250" data-id="1">
-      <img src="imagem copy/Bota Western Masculina.jpeg" alt="Texana Marrom">
-      <h2>Texana Marrom</h2>
-      <p>R$250,00</p>
-      <label for="size">Tamanho:</label>
-      <select id="size">
-        <option value="38">38</option>
-        <option value="40">40</option>
-        <option value="42">42</option>
-      </select>
-      <button onclick="addToCart(1)">Adicionar ao Carrinho</button>
-    </div>
+        <label for="pesquisa-produto">Pesquisar:</label>
+        <input type="text" id="pesquisa-produto" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
+    </section>
 
-    <div class="product" data-name="Texana Preta" data-price="270" data-id="2">
-      <img src="imagem copy/Bota Masculina Goyazes.jpeg" alt="Texana Preta">
-      <h2>Texana Preta</h2>
-      <p>R$270,00</p>
-      <label for="size">Tamanho:</label>
-      <select id="size">
-        <option value="38">38</option>
-        <option value="40">40</option>
-        <option value="42">42</option>
-      </select>
-      <button onclick="addToCart(2)">Adicionar ao Carrinho</button>
-    </div>
+    <section class="produtos" id="produtos-lista">
 
-    <!-- Mais produtos podem ser adicionados aqui -->
-  </section>
-
-  <!-- Carrinho de Compras -->
-  <div id="cart" class="hidden">
-    <h2>Carrinho de Compras</h2>
-    <ul id="cart-items"></ul>
-    <p id="total-price">Total: R$0,00</p>
-    <button onclick="checkout()">Finalizar Compra</button>
-  </div>
-
-  <script src="scripts.js"></script>
+    </section>
+    <label 
+    for="tamanho-bota">Escolha o tamanho:</label>
+                <select id="tamanho-bota">
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                </select>
+                <button
+     class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="carrinho-itens" class="carrinho-itens"></ul>
+        <p id="total" class="total">Total: R$ 0,00</p>
+        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+<footer>
+    <p>&copy; 2024 Texanas Online</p>
+</footer>
+    <script src="script.js"></script>
 </body>
 </html>
