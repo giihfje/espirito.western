@@ -1,29 +1,26 @@
-const products = [
-  {
-      id: 1,
-      name: "Texana Masculina Couro",
-      price: 350.00,
-      size: [38, 39, 40, 41, 42, 43],
-      image: "./imagem copy/image copy 2.png",
-  },
-  {
-      id: 2,
-      name: "Texana Feminina Estilo Western",
-      price: 299.00,
-      size: [34, 35, 36, 37, 38],
-      image: "./imagem copy/Footwear.jpeg",
-  },
-  {
-      id: 3,
-      name: "Texana De Couro Premium",
-      price: 450.00,
-      size: [39, 40, 41, 42],
-      image: "./imagem copy/zulyy.jpeg",
-  }
-];
 
 const produtos = [
-  
+  {
+  id: 1,
+  name: "Texana Masculina Couro",
+  price: 350.00,
+  size: [38, 39, 40, 41, 42, 43],
+  image: "./imagem copy/image copy 2.png",
+},
+{
+  id: 2,
+  name: "Texana Feminina Estilo Western",
+  price: 299.00,
+  size: [34, 35, 36, 37, 38],
+  image: "./imagem copy/Footwear.jpeg",
+},
+{
+  id: 3,
+  name: "Texana De Couro Premium",
+  price: 450.00,
+  size: [39, 40, 41, 42],
+  image: "./imagem copy/zulyy.jpeg",
+},
   { id: 1, nome: "Bota Texana Feminina", cor: "marrom", preco: 299.99, imagem: "./imagem/texana_feminina.jpg" },
   { id: 2, nome: "Bota Texana Masculina", cor: "preto", preco: 499.99, imagem: "./LANÇAMENTO 7M BOOTS  Novo modelo disponível para você aqui na 7M Boots_ Bota bruta é aqui!😍🤠👢.jpeg" },
   { id: 3, nome: "Bota Texana Feminina", cor: "preta", preco: 599.99, imagem: "./imagem copy/Bota Texana Country Cruz Azul.jpeg" },
