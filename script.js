@@ -21,6 +21,18 @@ const produtos = [
   size: [39, 40, 41, 42],
   image: "./imagem copy/zulyy.jpeg",
 },
+{ id: 20, 
+  nome: "Bota Texana Infantil",
+   cor: "infantil", preco: 120.40,
+    imagem:"./imagem copy/Footwear.jpeg"},
+  { id: 21,
+     nome: "Bota Texana Masculina",
+      cor: "azul", preco: 798.99,
+       imagem: "./imagem copy/mascuAzul.jpeg"},
+  { id: 22,
+     nome: "Bota Texana Masculina",
+      cor: "marrom", preco: 899.99, 
+      imagem: "./imagem copy/texanasmasMARR.jpeg"},
 ];
 
 // Carrinho de compras
