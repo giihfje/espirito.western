@@ -13,28 +13,45 @@
         <p>Bem-vindo a Espírito Western!</p>
         <p>Caminhe com atitude, viva com liberdade-texanas!</p>
     </header>
-    <label for="pesquisa-produto">Pesquisar:</label>
+    <section class="filtros">
+        <label for="filtro-cor">Filtrar por Cor:</label>
+        <select id="filtro-cor" onchange="filtrarProdutos()">
+            <option value="">Todas</option>
+            <option value="marrom">Marrom</option>
+            <option value="brilho">Brilho</option>
+            <option value="azul">Azul</option>
+            <option value="infantil">Infantil</option>
+            <option value="branca">Branca</option>
+            <option value="preta">Preta</option>
+        </select>
+
+        <label for="pesquisa-produto">Pesquisar:</label>
         <input type="text" id="pesquisa-produto" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
     </section>
 
     <section class="produtos" id="produtos-lista">
 
-    <!-- Modal do Carrinho -->
-    <div id="cartModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Carrinho de Compras</h2>
-            <ul id="cart-items"></ul>
-            <p><strong>Total: R$ <span id="cart-total">0.00</span></strong></p>
-            <button id="checkoutButton">Finalizar Compra</button>
-        </div>
-    </div>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Espirito Western - Todos os direitos reservados.</p>
-    </footer>
-
+    </section>
+    <label 
+    for="tamanho-bota">Escolha o tamanho:</label>
+                <select id="tamanho-bota">
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                </select>
+                <button
+     class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="carrinho-itens" class="carrinho-itens"></ul>
+        <p id="total" class="total">Total: R$ 0,00</p>
+        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+<footer>
+    <p>&copy; 2024 Texanas Online</p>
+</footer>
     <script src="script.js"></script>
 </body>
 </html>
