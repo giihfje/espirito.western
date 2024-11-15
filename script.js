@@ -48,6 +48,22 @@ function exibirProdutos(produtosFiltrados = produtos) {
       lista.appendChild(item);
   });
 }
+function adicionarAoCarrinho(produto) {
+  let tamanho = '';
+
+  if (produto === 'Bota de Cowboy') {
+      const selectElement = document.getElementById('tamanho-bota');
+      tamanho = selectElement.value;
+
+      if (!tamanho) {
+          alert('Por favor, selecione um tamanho antes de adicionar ao carrinho.');
+          return;
+      }
+  }
+  const mensagem = tamanho ? `${produto} (Tamanho ${tamanho}) foi adicionado ao carrinho!` : `${produto} foi adicionado ao carrinho!`;
+  alert(mensagem);
+}
+
 function adicionarAoCarrinho(produtoId) {
   const produto = produtos.find(p => p.id === produtoId);
   const itemCarrinho = carrinho.find(item => item.id === produtoId);
