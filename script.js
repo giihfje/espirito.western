@@ -1,233 +1,93 @@
 const products = [
-  { 
-      id: 1, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
+  { id: 21, nome: "Bota Texana Masculina", cor: "azul", preco: 798.99, imagem: "./imagem copy/mascuAzul.jpeg",
+    sizes: [36, 37, 38, 40]
   },
-  { 
-      id: 2, 
-      name: "Texana Country", 
-      image: "https://via.placeholder.com/300x300?text=Texana+2", 
-      price: 420, 
-      sizes: [37, 38, 40, 42, 43]
+  { id: 22, nome: "Bota Texana Masculina", cor: "marrom", preco: 899.99, imagem: "./imagem copy/texanasmasMARR.jpeg",
+    sizes: [36, 37, 38, 40]
   },
-  { 
-      id: 3, 
-      name: "Texana Premium", 
-      image: "https://via.placeholder.com/300x300?text=Texana+3", 
-      price: 500, 
-      sizes: [39, 40, 41, 42, 44]
+  { id: 23, nome: "Bota Texana Masculina", cor: "marrom", preco: 909.99, imagem: "./imagem copy/texanasMMA.jpeg",
+    sizes: [36, 37, 38, 40]
   },
-  { 
-      id: 4, 
-      name: "Texana Casual", 
-      image: "https://via.placeholder.com/300x300?text=Texana+4", 
-      price: 310, 
-      sizes: [36, 37, 38, 40]
+  { id: 24, nome: "Bota Texana Masculina", cor: "marrom", preco: 874.99, imagem: "./imagem copy/Bota Masculina Goyazes.jpeg",
+    sizes: [36, 37, 38, 40]
   },
-  { 
-      id: 5, 
-      name: "Texana Luxo", 
-      image: "https://via.placeholder.com/300x300?text=Texana+5", 
-      price: 620, 
-      sizes: [40, 41, 42, 43]
+  { id: 25, nome: "Bota Texana Masculina", cor: "preta", preco: 986.45, imagem: "./imagem copy/texanaPreta.jpeg",
+    sizes: [36, 37, 38, 40]
   },
-  { 
-      id: 6, 
-      name: "Texana Customizada", 
-      image: "https://via.placeholder.com/300x300?text=Texana+6", 
-      price: 800, 
-      sizes: [38, 39, 40, 41, 44]
+  { id: 26, nome: "Bota Texana Masculina", cor: "marrom", preco: 469.43, imagem: "./imagem copy/texansAA.jpeg",
+    sizes: [36, 37, 38, 40]
   },
-{ 
-      id: 7, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
+  { id: 27, nome: "Bota Texana Masculina", cor: "marrom", preco: 599.89, imagem: "./imagem copy/texanas,,,,rrr.jpeg",
+    sizes: [36, 37, 38, 40]
   },
-{ 
-      id: 8, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 9, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 10, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 11, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 12, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 13,
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 14, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 16, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 17, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 18, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 19, 
-      name: "Texana Tradicional", 
-      image: "./imagem copy/image copy.png", 
-      price: 350, 
-      sizes: [38, 39, 40, 41, 42]
-  },
-{ 
-      id: 20, 
-      name: "Texana Infantil", 
-      image: "./imagem copy/Footwear.jpeg", 
-      price: 90,
-      sizes: [10, 12, 16 , 22, 24]
-  },
+  { id: 28, nome: "Bota Texana Feminina", cor: "brilho", preco: 659.99, imagem: "./imagem copy/ZULcowgirl.jpeg",
+    sizes: [36, 37, 38, 40]
+   },
+  { id: 29, nome: "Bota Texana Feminina", cor: "branca", preco: 549.99, imagem: "./imagem copy/bRanca.jpeg",
+    sizes: [36, 37, 38, 40]
+   },
+  { id: 30, nome: "Bota Texana Feminina", cor: "brilho", preco: 989.99, imagem: "./imagem copy/zulyy.jpeg",
+    sizes: [36, 37, 38, 40]
+   },
 ];
 
-const products = [
-  { 
-      id: 1, 
-      name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
-      price: 350.00, 
-      sizes: [38, 39, 40, 41, 42] 
-  },
-  { 
-      id: 2, 
-      name: "Texana Country", 
-      image: "https://via.placeholder.com/300x300?text=Texana+2", 
-      price: 420.00, 
-      sizes: [37, 38, 40, 42, 43] 
-  },
-  { 
-      id: 3, 
-      name: "Texana Premium", 
-      image: "https://via.placeholder.com/300x300?text=Texana+3", 
-      price: 500.00, 
-      sizes: [39, 40, 41, 42, 44] 
-  }
-];
-
-let cart = [];
-
-function loadProducts() {
-  const productList = document.getElementById('productList');
-  productList.innerHTML = '';
-  products.forEach(product => {
-      const productCard = document.createElement('div');
-      productCard.className = 'product-card';
-      productCard.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p>Preço: R$ ${product.price.toFixed(2)}</p>
-          <label for="sizeSelect${product.id}">Selecione o tamanho:</label>
-          <select id="sizeSelect${product.id}">
-              ${product.sizes.map(size => <option value="${size}">${size}</option>).join('')}
-          </select>
-          <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
+let carrinho = [];
+function exibirProdutos(produtosFiltrados = produtos) {
+  const lista = document.getElementById("produtos-lista");
+  lista.innerHTML = "";
+  produtosFiltrados.forEach(produto => {
+      const item = document.createElement("div");
+      item.className = "produto";
+      item.innerHTML = `
+          <img src="${produto.imagem}" alt="${produto.nome}">
+          <h2>${produto.nome}</h2>
+          <p>R$ ${produto.preco.toFixed(2)}</p>
+          <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
       `;
-      productList.appendChild(productCard);
+      lista.appendChild(item);
   });
 }
-
-function addToCart(productId) {
-  const product = products.find(p => p.id === productId);
-  const selectedSize = document.getElementById(sizeSelect${productId}).value;
-  if (!selectedSize) {
-      alert('Por favor, selecione um tamanho.');
-      return;
-  }
-
-  cart.push({ ...product, selectedSize });
-  alert(${product.name} (Tamanho ${selectedSize}) adicionado ao carrinho!);
-  document.getElementById('cartCount').textContent = cart.length;
-}
-
-function viewCart() {
-  if (cart.length === 0) {
-      alert('Seu carrinho está vazio.');
+function adicionarAoCarrinho(produtoId) {
+  const produto = produtos.find(p => p.id === produtoId);
+  const itemCarrinho = carrinho.find(item => item.id === produtoId);
+  if (itemCarrinho) {
+      itemCarrinho.quantidade++;
   } else {
-      const cartItems = cart.map(p => ${p.name} - Tamanho ${p.selectedSize} - R$${p.price.toFixed(2)}).join('\n');
-      alert(Itens no carrinho:\n${cartItems});
+      carrinho.push({ ...produto, quantidade: 1 });
   }
+  atualizarCarrinho();
 }
-
-function searchProduct() {
-  const query = document.getElementById('searchInput').value.toLowerCase();
-  const filteredProducts = products.filter(p => p.name.toLowerCase().includes(query));
-  const productList = document.getElementById('productList');
-  productList.innerHTML = '';
-  if (filteredProducts.length > 0) {
-      filteredProducts.forEach(product => {
-          const productCard = document.createElement('div');
-          productCard.className = 'product-card';
-          productCard.innerHTML = `
-              <img src="${product.image}" alt="${product.name}">
-              <h3>${product.name}</h3>
-              <p>Preço: R$ ${product.price.toFixed(2)}</p>
-              <label for="sizeSelect${product.id}">Selecione o tamanho:</label>
-              <select id="sizeSelect${product.id}">
-                  ${product.sizes.map(size => <option value="${size}">${size}</option>).join('')}
-              </select>
-              <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
-          `;
-          productList.appendChild(productCard);
-      });
-  } else {
-      productList.innerHTML = '<p>Nenhum produto encontrado.</p>';
-  }
+function atualizarCarrinho() {
+  const lista = document.getElementById("carrinho-itens");
+  lista.innerHTML = "";
+  let total = 0;
+  carrinho.forEach(item => {
+      total += item.preco * item.quantidade;
+      const li = document.createElement("li");
+      li.innerHTML = `
+          ${item.nome} - ${item.quantidade} x R$ ${item.preco.toFixed(2)}
+          <button onclick="removerDoCarrinho(${item.id})">Remover</button>
+      `;
+      lista.appendChild(li);
+  });
+  document.getElementById("total").innerText = total
 }
-
-document.getElementById('searchButton').addEventListener('click', searchProduct);
-
-window.onload = loadProducts;
+function removerDoCarrinho(produtoId) {
+  carrinho = carrinho.filter(item => item.id !== produtoId);
+  atualizarCarrinho();
+}
+function filtrarProdutos() {
+  const cor = document.getElementById("filtro-cor").value;
+  const termoPesquisa = document.getElementById("pesquisa-produto").value.toLowerCase();
+  const produtosFiltrados = produtos.filter(p =>
+      (cor === "" || p.cor === cor) &&
+      (termoPesquisa === "" || p.nome.toLowerCase().includes(termoPesquisa))
+  );
+  exibirProdutos(produtosFiltrados);
+}
+function finalizarCompra() {
+  alert("Compra finalizada!");
+  carrinho = [];
+  atualizarCarrinho();
+}
+exibirProdutos();
