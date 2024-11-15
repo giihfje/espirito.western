@@ -34,31 +34,22 @@ const produtos = [
       cor: "marrom", preco: 899.99, 
       imagem: "./imagem copy/texanasmasMARR.jpeg"},
 ];
-
-// Carrinho de compras
 let carrinho = [];
-
-// Renderizar os produtos na tela
-function renderProducts(products) {
-  const productList = document.getElementById('product-list');
-  productList.innerHTML = ''; // Limpar a lista de produtos
+function exibirProdutos(produtosFiltrados = produtos) {
+  const lista = document.getElementById("produtos-lista");
+  lista.innerHTML = "";
+  produtosFiltrados.forEach(produto => {
+      const item = document.createElement("div");
+      item.className = "produto";
+      item.innerHTML = `
+          <img src="${produto.imagem}" alt="${produto.nome}">
+          <h2>${produto.nome}</h2>
+          <p>R$ ${produto.preco.toFixed(2)}</p>
+          <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
+      `;
+      lista.appendChild(item);
+  });
 }
-  function exibirProdutos(produtosFiltrados = produtos) {
-    const lista = document.getElementById("produtos-lista");
-    lista.innerHTML = "";
-    produtosFiltrados.forEach(produto => {
-        const item = document.createElement("div");
-        item.className = "produto";
-        item.innerHTML = `
-            <img src="${produto.imagem}" alt="${produto.nome}">
-            <h2>${produto.nome}</h2>
-            <p>R$ ${produto.preco.toFixed(2)}</p>
-            <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
-        `;
-        lista.appendChild(item);
-    });
-  }
-// Adicionar um produto ao carrinho
 function adicionarAoCarrinho(produtoId) {
   const produto = produtos.find(p => p.id === produtoId);
   const itemCarrinho = carrinho.find(item => item.id === produtoId);
@@ -69,8 +60,6 @@ function adicionarAoCarrinho(produtoId) {
   }
   atualizarCarrinho();
 }
-
-// Atualizar o carrinho de compras
 function atualizarCarrinho() {
   const lista = document.getElementById("carrinho-itens");
   lista.innerHTML = "";
@@ -90,13 +79,18 @@ function removerDoCarrinho(produtoId) {
   carrinho = carrinho.filter(item => item.id !== produtoId);
   atualizarCarrinho();
 }
+function filtrarProdutos() {
+  const cor = document.getElementById("filtro-cor").value;
+  const termoPesquisa = document.getElementById("pesquisa-produto").value.toLowerCase();
+  const produtosFiltrados = produtos.filter(p =>
+      (cor === "" || p.cor === cor) &&
+      (termoPesquisa === "" || p.nome.toLowerCase().includes(termoPesquisa))
+  );
+  exibirProdutos(produtosFiltrados);
+}
 function finalizarCompra() {
   alert("Compra finalizada!");
   carrinho = [];
   atualizarCarrinho();
 }
 exibirProdutos();
-  cartCount.textContent = cart.length;
-
-  let total = 0;
-  cartItems
