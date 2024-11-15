@@ -24,52 +24,66 @@ const produtos = [
 ];
 
 // Carrinho de compras
-let cart = [];
+let carrinho = [];
 
 // Renderizar os produtos na tela
 function renderProducts(products) {
   const productList = document.getElementById('product-list');
   productList.innerHTML = ''; // Limpar a lista de produtos
-
-  products.forEach(product => {
-      const productElement = document.createElement('div');
-      productElement.classList.add('product');
-
-      productElement.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p>R$ ${product.price.toFixed(2)}</p>
-          <select class="product-size">
-              ${product.size.map(size => `<option value="${size}">${size}</option>`).join('')}
-          </select>
-          <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
-      `;
-      productList.appendChild(productElement);
-  });
 }
-
-// Adicionar um produto ao carrinho
-function addToCart(productId) {
-  const product = products.find(p => p.id === productId);
-  const selectedSize = document.querySelector(`#product-list .product:nth-child(${productId}) .product-size`).value;
-  
-  const productInCart = cart.find(item => item.id === productId && item.size === selectedSize);
-
-  if (productInCart) {
-      productInCart.quantity++;
-  } else {
-      cart.push({ ...product, size: selectedSize, quantity: 1 });
+  function exibirProdutos(produtosFiltrados = produtos) {
+    const lista = document.getElementById("produtos-lista");
+    lista.innerHTML = "";
+    produtosFiltrados.forEach(produto => {
+        const item = document.createElement("div");
+        item.className = "produto";
+        item.innerHTML = `
+            <img src="${produto.imagem}" alt="${produto.nome}">
+            <h2>${produto.nome}</h2>
+            <p>R$ ${produto.preco.toFixed(2)}</p>
+            <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
+        `;
+        lista.appendChild(item);
+    });
   }
-
-  updateCart();
+// Adicionar um produto ao carrinho
+function adicionarAoCarrinho(produtoId) {
+  const produto = produtos.find(p => p.id === produtoId);
+  const itemCarrinho = carrinho.find(item => item.id === produtoId);
+  if (itemCarrinho) {
+      itemCarrinho.quantidade++;
+  } else {
+      carrinho.push({ ...produto, quantidade: 1 });
+  }
+  atualizarCarrinho();
 }
 
 // Atualizar o carrinho de compras
-function updateCart() {
-  const cartCount = document.getElementById('cart-count');
-  const cartTotal = document.getElementById('cart-total');
-  const cartItems = document.getElementById('cart-items');
+function atualizarCarrinho() {
+  const lista = document.getElementById("carrinho-itens");
+  lista.innerHTML = "";
+  let total = 0;
+  carrinho.forEach(item => {
+      total += item.preco * item.quantidade;
+      const li = document.createElement("li");
+      li.innerHTML = `
+          ${item.nome} - ${item.quantidade} x R$ ${item.preco.toFixed(2)}
+          <button onclick="removerDoCarrinho(${item.id})">Remover</button>
+      `;
+      lista.appendChild(li);
+  });
+  document.getElementById("total").innerText = total
 }
+function removerDoCarrinho(produtoId) {
+  carrinho = carrinho.filter(item => item.id !== produtoId);
+  atualizarCarrinho();
+}
+function finalizarCompra() {
+  alert("Compra finalizada!");
+  carrinho = [];
+  atualizarCarrinho();
+}
+exibirProdutos();
   cartCount.textContent = cart.length;
 
   let total = 0;
