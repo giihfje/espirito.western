@@ -1,33 +1,57 @@
-<!DOCTYPE html>
+[23:46, 14/11/2024] Gisele: <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espírito Western</title>
+    <title>Espírito Western - Loja de Botas Texanas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <nav class="navbar">
-            <h1>Loja de Texanas</h1>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Buscar Texanas...">
-                <button onclick="searchProduct()">Pesquisar</button>
-            </div>
-            <div class="cart">
-                <button onclick="viewCart()">Carrinho (<span id="cartCount">0</span>)</button>
-            </div>
-        </nav>
+        <img src="imagem copy/western.png" alt="espiritowestern">  
+        <p>Bem-vindo a Espírito Western!</p>
+        <p>Caminhe com atitude, viva com liberdade-texanas!</p>
     </header>
-        <section class="products" id="productList">
-            <!-- Produtos serão inseridos dinamicamente aqui -->
-        </section>
-    </main>
+    <nav class="navbar">
+        <h1>Loja de Texanas</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar Texanas...">
+            <button onclick="searchProduct()">Pesquisar</button>
+        </div>
+        <div class="cart">
+            <button onclick="viewCart()">Carrinho (<span id="cartCount">0</span>)</button>
+        </div>
+    <section class="filtros">
+        <label for="filtro-cor">Filtrar por Cor:</label>
+        <select id="filtro-cor" onchange="filtrarProdutos()">
+            <option value="">Todas</option>
+            <option value="marrom">Marrom</option>
+            <option value="brilho">Brilho</option>
+            <option value="azul">Azul</option>
+            <option value="infantil">Infantil</option>
+            <option value="branca">Branca</option>
+            <option value="preta">Preta</option>
+        </select>
 
-    <footer>
-        <p>&copy; 2024 Loja de Texanas. Todos os direitos reservados.</p>
-    </footer>
+        <label for="pesquisa-produto">Pesquisar:</label>
+        <input type="text" id="pesquisa-produto" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
+    </section>
 
+    <section class="produtos" id="produtos-lista">
+
+    </section>
+    <label 
+     class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="carrinho-itens" class="carrinho-itens"></ul>
+        <p id="total" class="total">Total: R$ 0,00</p>
+        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+<footer>
+    <p>&copy; 2024 Texanas Online</p>
+</footer>
     <script src="script.js"></script>
 </body>
 </html>
+[23:47, 14/11/2024] Gisele: 
