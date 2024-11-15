@@ -43,12 +43,16 @@
                     <option value="42">42</option>
                 </select>
                 <button
-     class="carrinho">
-        <h2>Seu Carrinho</h2>
-        <ul id="carrinho-itens" class="carrinho-itens"></ul>
-        <p id="total" class="total">Total: R$ 0,00</p>
-        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
-    </section>
+                 id="cartModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Carrinho de Compras</h2>
+                        <ul id="cart-items"></ul>
+                        <p><strong>Total: R$ <span id="cart-total">0.00</span></strong></p>
+                        <button id="checkoutButton">Finalizar Compra</button>
+                    </div>
+                </div>
+            
 <footer>
     <p>&copy; 2024 Texanas Online</p>
 </footer>
