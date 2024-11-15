@@ -134,67 +134,63 @@ const products = [
   },
 ];
 
-let cart = [];
-
-function loadProducts() {
-  const productList = document.getElementById('productList');
-  productList.innerHTML = '';
-  products.forEach(product => {
-      const productCard = document.createElement('div');
-      productCard.className = 'product-card';
-      productCard.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p>Preço: R$ ${product.price.toFixed(2)}</p>
-          <label for="sizeSelect${product.id}">Selecione o tamanho:</label>
-          <select id="sizeSelect${product.id}">
-              ${product.sizes.map(size => <option value="${size}">${size}</option>).join('')}
-          </select>
-          <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
+let carrinho = [];
+function exibirProdutos(produtosFiltrados = produtos) {
+  const lista = document.getElementById("produtos-lista");
+  lista.innerHTML = "";
+  produtosFiltrados.forEach(produto => {
+      const item = document.createElement("div");
+      item.className = "produto";
+      item.innerHTML = `
+          <img src="${produto.imagem}" alt="${produto.nome}">
+          <h2>${produto.nome}</h2>
+          <p>R$ ${produto.preco.toFixed(2)}</p>
+          <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
       `;
-      productList.appendChild(productCard);
+      lista.appendChild(item);
   });
 }
-
-function addToCart(productId) {
-  const product = products.find(p => p.id === productId);
-  const selectedSize = document.getElementById(sizeSelect${productId}).value;
-  if (!selectedSize) {
-      alert('Por favor, selecione um tamanho.');
-      return;
-  }
-}
-
-  function viewCart() {
-  if (cart.length === 0) {
-      alert('Seu carrinho está vazio.');
-}
-}
-
-function searchProduct() {
-  const query = document.getElementById('searchInput').value.toLowerCase();
-  const filteredProducts = products.filter(p => p.name.toLowerCase().includes(query));
-  const productList = document.getElementById('productList');
-  productList.innerHTML = '';
-  if (filteredProducts.length > 0) {
-      filteredProducts.forEach(product => {
-          const productCard = document.createElement('div');
-          productCard.className = 'product-card';
-          productCard.innerHTML = `
-              <img src="${product.image}" alt="${product.name}">
-              <h3>${product.name}</h3>
-              <p>Preço: R$ ${product.price.toFixed(2)}</p>
-              <label for="sizeSelect${product.id}">Selecione o tamanho:</label>
-              <select id="sizeSelect${product.id}">
-                  ${product.sizes.map(size => <option value="${size}">${size}</option>).join('')}
-              </select>
-              <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
-          `;
-          productList.appendChild(productCard);
-      });
+function adicionarAoCarrinho(produtoId) {
+  const produto = produtos.find(p => p.id === produtoId);
+  const itemCarrinho = carrinho.find(item => item.id === produtoId);
+  if (itemCarrinho) {
+      itemCarrinho.quantidade++;
   } else {
-      productList.innerHTML = '<p>Nenhum produto encontrado.</p>';
+      carrinho.push({ ...produto, quantidade: 1 });
   }
+  atualizarCarrinho();
 }
-
-window.onload = loadProducts;
+function atualizarCarrinho() {
+  const lista = document.getElementById("carrinho-itens");
+  lista.innerHTML = "";
+  let total = 0;
+  carrinho.forEach(item => {
+      total += item.preco * item.quantidade;
+      const li = document.createElement("li");
+      li.innerHTML = `
+          ${item.nome} - ${item.quantidade} x R$ ${item.preco.toFixed(2)}
+          <button onclick="removerDoCarrinho(${item.id})">Remover</button>
+      `;
+      lista.appendChild(li);
+  });
+  document.getElementById("total").innerText = total
+}
+function removerDoCarrinho(produtoId) {
+  carrinho = carrinho.filter(item => item.id !== produtoId);
+  atualizarCarrinho();
+}
+function filtrarProdutos() {
+  const cor = document.getElementById("filtro-cor").value;
+  const termoPesquisa = document.getElementById("pesquisa-produto").value.toLowerCase();
+  const produtosFiltrados = produtos.filter(p =>
+      (cor === "" || p.cor === cor) &&
+      (termoPesquisa === "" || p.nome.toLowerCase().includes(termoPesquisa))
+  );
+  exibirProdutos(produtosFiltrados);
+}
+function finalizarCompra() {
+  alert("Compra finalizada!");
+  carrinho = [];
+  atualizarCarrinho();
+}
+exibirProdutos();
