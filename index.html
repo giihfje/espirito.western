@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espírito Western - Loja de Botas Texanas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Loja Online - Espírito Western</title>
 </head>
 <body>
-
     <header>
-        <img src="imagem copy/western.png" alt="espiritowestern">  
-        <p>Bem-vindo a Espírito Western!</p>
-        <p>Caminhe com atitude, viva com liberdade-texanas!</p>
+        <h1>Loja Online - Espírito Western</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="filtros">
-        <label for="filtro-cor">Filtrar por Cor:</label>
-        <select id="filtro-cor" onchange="filtrarProdutos()">
-            <option value="">Todas</option>
-            <option value="marrom">Marrom</option>
-            <option value="brilho">Brilho</option>
-            <option value="azul">Azul</option>
-            <option value="infantil">Infantil</option>
-            <option value="branca">Branca</option>
-            <option value="preta">Preta</option>
-        </select>
 
-        <label for="pesquisa-produto">Pesquisar:</label>
-        <input type="text" id="pesquisa-produto" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
-    </section>
-
-    <section class="produtos" id="produtos-lista">
-
-    </section>
-    <label 
-    for="tamanho-bota">Escolha o tamanho:</label>
+    <main>
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="produto">
+                <img src="imagens/produto1.jpg" alt="Produto 1">
+                <h3>Camisa de Flanela</h3>
+                <p>Preço: R$ 129,90</p>
+                <button onclick="adicionarAoCarrinho('Camisa de Flanela')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="imagens/produto2.jpg" alt="Produto 2">
+                <h3>Bota de Cowboy</h3>
+                <p>Preço: R$ 299,90</p>
+                <label for="tamanho-bota">Escolha o tamanho:</label>
                 <select id="tamanho-bota">
                     <option value="37">37</option>
                     <option value="38">38</option>
@@ -42,16 +40,25 @@
                     <option value="41">41</option>
                     <option value="42">42</option>
                 </select>
-                <button
-     class="carrinho">
-        <h2>Seu Carrinho</h2>
-        <ul id="carrinho-itens" class="carrinho-itens"></ul>
-        <p id="total" class="total">Total: R$ 0,00</p>
-        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
-    </section>
-<footer>
-    <p>&copy; 2024 Texanas Online</p>
-</footer>
+                <button onclick="adicionarAoCarrinho('Bota de Cowboy')">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo à nossa loja online! Aqui você encontra produtos inspirados na cultura western.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco pelo email: contato@lojawestern.com.br</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loja Online - Espírito Western</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
