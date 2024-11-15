@@ -4,21 +4,21 @@ const products = [
       name: "Texana Masculina Couro",
       price: 350.00,
       size: [38, 39, 40, 41, 42, 43],
-      image: "images/texana1.jpg",
+      image: "./imagem copy/image copy 2.png",
   },
   {
       id: 2,
       name: "Texana Feminina Estilo Western",
       price: 299.00,
       size: [34, 35, 36, 37, 38],
-      image: "images/texana2.jpg",
+      image: "./imagem copy/Footwear.jpeg",
   },
   {
       id: 3,
       name: "Texana De Couro Premium",
       price: 450.00,
       size: [39, 40, 41, 42],
-      image: "images/texana3.jpg",
+      image: "./imagem copy/zulyy.jpeg",
   }
 ];
 
