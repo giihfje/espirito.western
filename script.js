@@ -134,63 +134,100 @@ const products = [
   },
 ];
 
-let carrinho = [];
-function exibirProdutos(produtosFiltrados = produtos) {
-  const lista = document.getElementById("produtos-lista");
-  lista.innerHTML = "";
-  produtosFiltrados.forEach(produto => {
-      const item = document.createElement("div");
-      item.className = "produto";
-      item.innerHTML = `
-          <img src="${produto.imagem}" alt="${produto.nome}">
-          <h2>${produto.nome}</h2>
-          <p>R$ ${produto.preco.toFixed(2)}</p>
-          <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
-      `;
-      lista.appendChild(item);
-  });
-}
-function adicionarAoCarrinho(produtoId) {
-  const produto = produtos.find(p => p.id === produtoId);
-  const itemCarrinho = carrinho.find(item => item.id === produtoId);
-  if (itemCarrinho) {
-      itemCarrinho.quantidade++;
-  } else {
-      carrinho.push({ ...produto, quantidade: 1 });
+const products = [
+  { 
+      id: 1, 
+      name: "Texana Tradicional", 
+      image: "https://via.placeholder.com/300x300?text=Texana+1", 
+      price: 350.00, 
+      sizes: [38, 39, 40, 41, 42] 
+  },
+  { 
+      id: 2, 
+      name: "Texana Country", 
+      image: "https://via.placeholder.com/300x300?text=Texana+2", 
+      price: 420.00, 
+      sizes: [37, 38, 40, 42, 43] 
+  },
+  { 
+      id: 3, 
+      name: "Texana Premium", 
+      image: "https://via.placeholder.com/300x300?text=Texana+3", 
+      price: 500.00, 
+      sizes: [39, 40, 41, 42, 44] 
   }
-  atualizarCarrinho();
-}
-function atualizarCarrinho() {
-  const lista = document.getElementById("carrinho-itens");
-  lista.innerHTML = "";
-  let total = 0;
-  carrinho.forEach(item => {
-      total += item.preco * item.quantidade;
-      const li = document.createElement("li");
-      li.innerHTML = `
-          ${item.nome} - ${item.quantidade} x R$ ${item.preco.toFixed(2)}
-          <button onclick="removerDoCarrinho(${item.id})">Remover</button>
+];
+
+let cart = [];
+
+function loadProducts() {
+  const productList = document.getElementById('productList');
+  productList.innerHTML = '';
+  products.forEach(product => {
+      const productCard = document.createElement('div');
+      productCard.className = 'product-card';
+      productCard.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>Preço: R$ ${product.price.toFixed(2)}</p>
+          <label for="sizeSelect${product.id}">Selecione o tamanho:</label>
+          <select id="sizeSelect${product.id}">
+              ${product.sizes.map(size => <option value="${size}">${size}</option>).join('')}
+          </select>
+          <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
       `;
-      lista.appendChild(li);
+      productList.appendChild(productCard);
   });
-  document.getElementById("total").innerText = total
 }
-function removerDoCarrinho(produtoId) {
-  carrinho = carrinho.filter(item => item.id !== produtoId);
-  atualizarCarrinho();
+
+function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
+  const selectedSize = document.getElementById(sizeSelect${productId}).value;
+  if (!selectedSize) {
+      alert('Por favor, selecione um tamanho.');
+      return;
+  }
+
+  cart.push({ ...product, selectedSize });
+  alert(${product.name} (Tamanho ${selectedSize}) adicionado ao carrinho!);
+  document.getElementById('cartCount').textContent = cart.length;
 }
-function filtrarProdutos() {
-  const cor = document.getElementById("filtro-cor").value;
-  const termoPesquisa = document.getElementById("pesquisa-produto").value.toLowerCase();
-  const produtosFiltrados = produtos.filter(p =>
-      (cor === "" || p.cor === cor) &&
-      (termoPesquisa === "" || p.nome.toLowerCase().includes(termoPesquisa))
-  );
-  exibirProdutos(produtosFiltrados);
+
+function viewCart() {
+  if (cart.length === 0) {
+      alert('Seu carrinho está vazio.');
+  } else {
+      const cartItems = cart.map(p => ${p.name} - Tamanho ${p.selectedSize} - R$${p.price.toFixed(2)}).join('\n');
+      alert(Itens no carrinho:\n${cartItems});
+  }
 }
-function finalizarCompra() {
-  alert("Compra finalizada!");
-  carrinho = [];
-  atualizarCarrinho();
+
+function searchProduct() {
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  const filteredProducts = products.filter(p => p.name.toLowerCase().includes(query));
+  const productList = document.getElementById('productList');
+  productList.innerHTML = '';
+  if (filteredProducts.length > 0) {
+      filteredProducts.forEach(product => {
+          const productCard = document.createElement('div');
+          productCard.className = 'product-card';
+          productCard.innerHTML = `
+              <img src="${product.image}" alt="${product.name}">
+              <h3>${product.name}</h3>
+              <p>Preço: R$ ${product.price.toFixed(2)}</p>
+              <label for="sizeSelect${product.id}">Selecione o tamanho:</label>
+              <select id="sizeSelect${product.id}">
+                  ${product.sizes.map(size => <option value="${size}">${size}</option>).join('')}
+              </select>
+              <button onclick="addToCart(${product.id})">Adicionar ao Carrinho</button>
+          `;
+          productList.appendChild(productCard);
+      });
+  } else {
+      productList.innerHTML = '<p>Nenhum produto encontrado.</p>';
+  }
 }
-exibirProdutos();
+
+document.getElementById('searchButton').addEventListener('click', searchProduct);
+
+window.onload = loadProducts;
