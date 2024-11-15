@@ -121,14 +121,14 @@ const products = [
 { 
       id: 19, 
       name: "Texana Tradicional", 
-      image: "https://via.placeholder.com/300x300?text=Texana+1", 
+      image: "./imagem copy/image copy.png", 
       price: 350, 
       sizes: [38, 39, 40, 41, 42]
   },
 { 
       id: 20, 
       name: "Texana Infantil", 
-      image: "./", 
+      image: "./imagem copy/Footwear.jpeg", 
       price: 90,
       sizes: [10, 12, 16 , 22, 24]
   },
