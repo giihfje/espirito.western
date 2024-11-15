@@ -7,30 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <img src="imagem copy/western.png" alt="espiritowestern">  
         <p>Bem-vindo a Espírito Western!</p>
         <p>Caminhe com atitude, viva com liberdade-texanas!</p>
     </header>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="container">
-            <h1>Espirito Western</h1>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Buscar Texanas...">
-            </div>
-            <div class="cart">
-                <button id="cartButton">Carrinho (<span id="cart-count">0</span>)</button>
-            </div>
-        </div>
-    </header>
+    <label for="pesquisa-produto">Pesquisar:</label>
+        <input type="text" id="pesquisa-produto" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
+    </section>
 
-    <!-- Listagem de Produtos -->
-    <main>
-        <div class="product-list" id="product-list">
-            <!-- Produtos serão inseridos via JavaScript -->
-        </div>
-    </main>
+    <section class="produtos" id="produtos-lista">
 
     <!-- Modal do Carrinho -->
     <div id="cartModal" class="modal">
