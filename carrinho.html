@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos - Espírito Western</title>
+    <title>Carrinho - Espírito Western</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,24 +13,19 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="carrinho.html">Carrinho</a></li>
-                <li><a href="politica.html">Política de Trocas e Devoluções</a></li>
-                <li><a href="contatos.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Botas Texanas</h1>
-        <div class="produtos">
-            <!-- Lista de Produtos -->
-            <div class="produto">
-                <img src="img/boota1.jpg" alt="Bota 1">
-                <h3>Bota Texana Clássica</h3>
-                <p>R$ 450,00</p>
-                <button onclick="adicionarCarrinho('Bota Texana Clássica')">Adicionar ao Carrinho</button>
-            </div>
-            <!-- Adicione mais produtos aqui -->
+        <h1>Carrinho de Compras</h1>
+        <div id="carrinho-vazio">
+            <p>Seu carrinho está vazio.</p>
         </div>
+        <div id="itens-carrinho">
+            <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+        </div>
+        <button id="finalizar-compra" style="display: none;">Finalizar Compra</button>
     </main>
 
     <footer>

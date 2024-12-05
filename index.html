@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Espírito Western - Botas Texanas e mais</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espírito Western - Botas Texanas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="politica.html">Políticas de Troca</a></li> <!-- Nova aba -->
-        <li><a href="contatos.html">Contatos</a></li>
-      </ul>
-      <input type="text" id="search-bar" placeholder="Buscar produtos..." onkeyup="searchProducts()">
-    </nav>
-  </header>
+    <main>
+        <section class="banner">
+            <h1>Bem-vindo ao Espírito Western!</h1>
+            <p>Descubra as melhores botas texanas para o seu estilo!</p>
+            <a href="produtos.html" class="btn">Ver Produtos</a>
+        </section>
 
-  <!-- Banner Principal -->
-  <section id="home" class="banner">
-    <img src="promo_banner.jpg" alt="Espírito width">
-  </secti
+        <section class="destaques">
+            <h2>Botas em Destaque</h2>
+            <div class="produtos">
+                <!-- Produtos em destaque -->
+                <div class="produto">
+                    <img src="img/boota1.jpg" alt="Bota 1">
+                    <h3>Bota Texana Clássica</h3>
+                    <p>R$ 450,00</p>
+                    <button onclick="adicionarCarrinho('Bota Texana Clássica')">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Adicione mais produtos aqui -->
+            </div>
+        </section>
+    </main>
 
-  <!-- Produtos em Destaque -->
-  <section id="produtos">
-    <h2>Destaques de Produtos</h2>
-    <div id="produtos-list" class="produtos">
-      <!-- Produtos dinâmicos -->
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2024 Espírito Western - Todos os direitos reservados.</p>
+    </footer>
 
-  <!-- Carrinho de Compras -->
-  <section id="carrinho">
-    <h2>Carrinho de Compras</h2>
-    <ul id="itens-carrinho"></ul>
-    <p>Total: <span id="total">R$ 0,00</span></p>
-    <button onclick="finalizarCompra()">Finalizar Compra</button>
-  </section>
-
-  <!-- Rodapé -->
-  <footer>
-    <p>Espírito Western - Todos os direitos reservados</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
