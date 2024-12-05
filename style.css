@@ -1,42 +1,45 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f3f0f0;
+  color: #0a0a0a;
+  line-height: 1.6;
 }
 
-/* Cabeçalho */
 header {
-  background-color: #2b2b2b;
-  color: #fff;
-  padding: 20px;
+  background-color: #000000;
+  color: #f8f7ef;
+  padding: 15px 0;
   text-align: center;
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
-/* Filtros */
+
 .filtros {
   display: flex;
+  gap: 20px;
+  padding: 15px 20px;
   justify-content: center;
-  gap: 15px;
-  padding: 15px;
-  background-color: #eee;
+  background-color: #f1f4f1;
+  border-bottom: 1px solid #151515;
 }
 
-.filtros select, .filtros input {
-  padding: 10px;
+.filtros select,
+.filtros input[type="text"] {
+  padding: 8px;
   font-size: 1em;
+  border: 1px solid #521212;
+  border-radius: 5px;
 }
 
-/* Produtos */
 .produtos {
   display: flex;
   flex-wrap: wrap;
@@ -46,47 +49,44 @@ header h1 {
 }
 
 .produto {
-  width: 220px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #fdfcfc;
+  border: 1px solid #d7c6c6;
   border-radius: 8px;
+  width: 230px;
+  padding: 15px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .produto img {
   width: 100%;
-  height: 250px;
+  height: 220px;
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px 8px 0 0;
 }
 
-.produto h2, .produto p {
+.produto h2 {
+  font-size: 1.2em;
   margin: 10px 0;
+  color: #020202;
 }
 
 .produto button {
-  background-color: #2b2b2b;
-  color: white;
-  padding: 10px;
+  background-color: #1e1d1d;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
 }
-
-.produto button:hover {
-  background-color: #444;
-}
-
-footer {
-  background-color: #8B4513; /* Cor de fundo marrom estilo western */
-  color: white;
-  text-align: center;
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
 /* Carrinho */
@@ -129,4 +129,73 @@ footer {
 
 .carrinho button:hover {
   background-color: #218838;
+}
+.finalizar-compra {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilização da escolha de tamanho da bota texana */
+.select-tamanho {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.select-tamanho label {
+  font-size: 16px;
+  color: #8B4513; /* Cor de destaque no texto */
+  margin-bottom: 5px;
+  font-weight: bold; /* Negrito para maior visibilidade */
+  text-transform: uppercase; /* Estilo western com texto maiúsculo */
+}
+
+.select-tamanho select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  color: #555;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.select-tamanho select:focus {
+  border-color: #8B4513; /* Destaque na seleção com borda colorida */
+  outline: none;
+}
+
+/* Estilização de botão */
+.produto button {
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.produto button:hover {
+  background-color: #A0522D; /* Efeito de hover */
+}
+
+footer {
+  background-color: #8B4513; /* Cor de fundo marrom estilo western */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
