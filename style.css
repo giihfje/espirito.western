@@ -90,7 +90,7 @@ select-tamanho {
   border-radius: 5px;
 }
 
-.select-tamanho label {
+label {
   font-size: 16px;
   color: #8B4513; /* Cor de destaque no texto */
   margin-bottom: 5px;
