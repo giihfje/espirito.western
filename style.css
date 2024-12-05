@@ -140,11 +140,44 @@ footer {
   width: 100%;
 }
 
-#carrinho ul {
-  list-style: none;
-  padding: 0;
+/* Carrinho */
+.carrinho {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
 }
 
-#total {
-  font-weight: bold;
+.carrinho h2 {
+  margin-bottom: 15px;
+}
+
+.carrinho ul {
+  list-style: none;
+}
+
+.carrinho li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.carrinho button {
+  margin-top: 20px;
+  background-color: #28a745;
+  padding: 10px;
+  border: none;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carrinho button:hover {
+  background-color: #218838;
 }
