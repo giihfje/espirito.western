@@ -88,31 +88,24 @@ header h1 {
   background-color: #fff;
   border-bottom: 1px solid #ccc;
 }
-
-/* Carrinho */
 .carrinho {
-  right: 0;
-  top: 0;
-  width: 300px;
-  height: 100%;
   background-color: #fff;
-  box-shadow: 0px 0 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  justify-content: space-between;
   padding: 20px;
-  overflow-y: auto;
+  width: 300px;
+  cursor: pointer;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carrinho h2 {
+  text-align: center;
+}
+
+.carrinho-itens li {
   margin-bottom: 10px;
-}
-
-.carrinho ul {
-  list-style: none;
-}
-
-.carrinho li {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
 }
 
 .finalizar-compra {
@@ -123,60 +116,10 @@ header h1 {
   cursor: pointer;
 }
 
-
-.carrinho button {
-  margin-top: 20px;
-  background-color: #28a745;
-  padding: 10px;
-  color: white;
-  width: 100%;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.carrinho button:hover {
-  background-color: #218838;
-}
-
-/* Estilização da escolha de tamanho da bota texana */
 label {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #8B4513; /* Cor de destaque no texto */
-  margin-bottom: 5px;
-  font-weight: bold; /* Negrito para maior visibilidade */
-  text-transform: uppercase; /* Estilo western com texto maiúsculo */
-}
-
-/* Estilização de botão */
-.produto button {
-  background-color: #8B4513;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  width: 100%;
-}
-
-.produto button:hover {
-  background-color: #A0522D; /* Efeito de hover */
-}
-
-footer {
-  background-color: #8B4513; /* Cor de fundo marrom estilo western */
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  font-size: 10px;
+  color: #8B4513; 
+  margin-bottom: 10px;
+  font-weight: bold; 
+  text-transform: uppercase; 
 }
