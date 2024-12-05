@@ -67,13 +67,14 @@ function atualizarCarrinho() {
           ${item.nome} - ${item.quantidade} x R$ ${item.preco.toFixed(2)}
           <button onclick="removerDoCarrinho(${item.id})">Remover</button>
       `;
-      lista.appendChild(li);
-  });
-  document.getElementById("total").innerText = total
-}
+      lista.appendChild(li)
 function removerDoCarrinho(produtoId) {
   carrinho = carrinho.filter(item => item.id !== produtoId);
   atualizarCarrinho();
+  if (tamanho === "") {
+    alert("Por favor, selecione um tamanho.");
+    return;
+}
 }
 function filtrarProdutos() {
   const cor = document.getElementById("filtro-cor").value;
