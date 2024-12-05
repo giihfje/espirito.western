@@ -4,38 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Espírito Western - Botas Texanas e mais</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header>
     <nav>
-      <a href="/">Home</a>
-      <a href="/produtos">Produtos</a>
-      <a href="/contato">Contato</a>
-      <a href="/trocas">Política de Trocas</a>
-      <a href="/carrinho">Carrinho</a>
-    </nav>
-    <input type="text" placeholder="Pesquisar produtos..." id="search-bar">
-  </header>
-  <main>
-    <section class="banner">
-      <img src="promo_banner.jpg" alt="Promoção Especial">
-    </section>
-    <section class="categorias">
-      <h2>Categorias</h2>
       <ul>
-        <li><a href="/produtos?categoria=botas">Botas</a></li>
-        <li><a href="/produtos?categoria=roupas">Roupas</a></li>
-        <li><a href="/produtos?categoria=acessorios">Acessórios</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#trocas">Política de Trocas</a></li>
+        <li><a href="#carrinho">Carrinho</a></li>
       </ul>
-    </section>
-    <section class="destaques">
-      <h2>Destaques</h2>
-      <!-- Exibição de produtos mais vendidos e novidades -->
-      <div class="produtos">
-        <!-- Produtos destacados -->
-      </div>
-    </section>
-  </main>
+      <input type="text" id="search-bar" placeholder="Buscar produtos..." onkeyup="searchProducts()">
+    </nav>
+  </header>
+
+  <!-- Banner Principal -->
+  <section id="home" class="banner">
+    <img src="promo_banner.jpg" alt="Promoção Especial">
+  </section>
+
+  <!-- Categorias de Produtos -->
+  <section class="categorias">
+    <h2>Categorias</h2>
+    <div class="categoria-item">
+      <a href="#botas" onclick="filterCategory('botas')">Botas</a>
+      <a href="#roupas" onclick="filterCategory('roupas')">Roupas</a>
+      <a href="#acessorios" onclick="filterCategory('acessorios')">Acessórios</a>
+    </div>
+  </section>
+
+  <!-- Produtos em Destaque -->
+  <section id="produtos">
+    <h2>Destaques de Produtos</h2>
+    <div id="produtos-list" class="produtos">
+      <!-- Produtos dinâmicos -->
+    </div>
+  </section>
+
+  <!-- Carrinho de Compras -->
+  <section id="carrinho">
+    <h2>Carrinho de Compras</h2>
+    <ul id="itens-carrinho"></ul>
+    <p>Total: <span id="total">R$ 0,00</span></p>
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Espírito Western - Todos os direitos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
