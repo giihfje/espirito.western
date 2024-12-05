@@ -1,46 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espírito Western - Botas Texanas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Espírito Western - Loja de Botas Texanas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main>
-        <section class="banner">
-            <h1>Bem-vindo ao Espírito Western!</h1>
-            <p>Descubra as melhores botas texanas para o seu estilo!</p>
-            <a href="produtos.html" class="btn">Ver Produtos</a>
-        </section>
+    <header>
+        <img src="imagem copy/western.png" alt="espiritowestern">  
+        <p>Bem-vindo a Espírito Western!</p>
+        <p>Caminhe com atitude, viva com liberdade-texanas!</p>
+    </header>
+    <section class="filtros">
+        <label for="filtro-cor">Filtrar por Cor:</label>
+        <select id="filtro-cor" onchange="filtrarProdutos()">
+            <option value="">Todas</option>
+            <option value="marrom">Marrom</option>
+            <option value="brilho">Brilho</option>
+            <option value="azul">Azul</option>
+            <option value="infantil">Infantil</option>
+            <option value="branca">Branca</option>
+            <option value="preta">Preta</option>
+        </select>
 
-        <section class="destaques">
-            <h2>Botas em Destaque</h2>
-            <div class="produtos">
-                <!-- Produtos em destaque -->
-                <div class="produto">
-                    <img src="img/boota1.jpg" alt="Bota 1">
-                    <h3>Bota Texana Clássica</h3>
-                    <p>R$ 450,00</p>
-                    <button onclick="adicionarCarrinho('Bota Texana Clássica')">Adicionar ao Carrinho</button>
-                </div>
-                <!-- Adicione mais produtos aqui -->
-            </div>
-        </section>
-    </main>
+        <label for="pesquisa-produto">Pesquisar:</label>
+        <input type="text" id="pesquisa-produto" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
+    </section>
+
+    <section class="produtos" id="produtos-lista">
+
+    
+      
+         <button class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="carrinho-itens" class="carrinho-itens"></ul>
+        <p id="total" class="total">Total: R$ 0,00</p>
+        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
     <nav>
       <ul>
-        <li><a href="index.html">Início</a></li>
         <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="carrinho.html">Carrinho</a></li>
-        <li><a href="politica.html">Política de Trocas e Devoluções</a></li>
-        <li><a href="contatos.html">Contato</a></li>
-    </ul>
+        <li><a href="contatos.html">Contatos</a></li>
+      </ul>
     </nav>
-    <footer>
-        <p>&copy; 2024 Espírito Western - Todos os direitos reservados.</p>
-    </footer>
+
+<footer>
+    <p>&copy; 2024 Texanas Online</p>
+</footer>
 
     <script src="script.js"></script>
 </body>
