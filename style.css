@@ -3,82 +3,83 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f4f0;
-  margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
   color: #333;
 }
 
+/* Cabeçalho */
 header {
-  background-color: #8B4513; /* Cor de fundo marrom estilo western */
-  color: white;
-  padding: 15px;
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 20px;
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+header h1 {
+  font-size: 2.5em;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 10px;
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: #eee;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+.filtros select, .filtros input {
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Produtos */
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .produto {
+  width: 220px;
+  background-color: #fff;
   border: 1px solid #ddd;
-  padding: 15px;
-  margin: 15px;
+  border-radius: 8px;
   text-align: center;
-  background-color: white;
-  display: inline-block;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar o produto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .produto img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px; /* Espaço entre imagem e texto */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-.produto h3 {
-  font-size: 18px;
-  color: #8B4513; /* Cor de destaque */
+.produto h2, .produto p {
   margin: 10px 0;
 }
 
-.produto p {
-  font-size: 16px;
-  color: #555;
-}
-
 .produto button {
-  background-color: #8B4513;
+  background-color: #2b2b2b;
   color: white;
-  border: none;
   padding: 10px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  width: 100%;
 }
 
 .produto button:hover {
-  background-color: #A0522D; /* Cor de hover mais escura */
+  background-color: #444;
 }
 
-/* Estilização da escolha de tamanho da bota texana */
-.select-tamanho {
+select-tamanho {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
