@@ -96,13 +96,13 @@ header h1 {
   width: 300px;
   height: 100%;
   background-color: #fff;
-  box-shadow: 8px 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   overflow-y: auto;
 }
 
 .carrinho h2 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .carrinho ul {
@@ -139,7 +139,7 @@ header h1 {
 }
 
 /* Estilização da escolha de tamanho da bota texana */
-.select-tamanho label {
+label {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -148,9 +148,6 @@ header h1 {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
   border-radius: 5px;
-}
-
-.select-tamanho label {
   font-size: 16px;
   color: #8B4513; /* Cor de destaque no texto */
   margin-bottom: 5px;
@@ -158,7 +155,7 @@ header h1 {
   text-transform: uppercase; /* Estilo western com texto maiúsculo */
 }
 
-.select-tamanho select label {
+ label {
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -169,7 +166,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
-.select-tamanho select:focus label{
+ label{
   border-color: #8B4513; /* Destaque na seleção com borda colorida */
   outline: none;
 }
