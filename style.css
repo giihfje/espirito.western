@@ -115,11 +115,18 @@ header h1 {
   border-radius: 5px;
   cursor: pointer;
 }
-
-label {
-  font-size: 10px;
-  color: #8B4513; 
-  margin-bottom: 10px;
-  font-weight: bold; 
-  text-transform: uppercase; 
+label{
+  text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+}
+footer {
+  background-color: #8B4513; /* Cor de fundo marrom estilo western */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
