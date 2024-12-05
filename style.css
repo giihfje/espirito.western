@@ -88,17 +88,11 @@ label {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
   border-radius: 5px;
-}
-
-label {
   font-size: 16px;
   color: #8B4513; /* Cor de destaque no texto */
   margin-bottom: 5px;
   font-weight: bold; /* Negrito para maior visibilidade */
   text-transform: uppercase; /* Estilo western com texto maiúsculo */
-}
-
-label {
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -107,9 +101,6 @@ label {
   color: #555;
   width: 100%;
   margin-bottom: 10px;
-}
-
-label {
   border-color: #8B4513; /* Destaque na seleção com borda colorida */
   outline: none;
 }
