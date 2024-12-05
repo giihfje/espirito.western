@@ -116,6 +116,15 @@ header h1 {
   padding: 8px 0;
 }
 
+.finalizar-compra {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 .carrinho button {
   margin-top: 20px;
   background-color: #28a745;
@@ -130,16 +139,9 @@ header h1 {
 .carrinho button:hover {
   background-color: #218838;
 }
-.finalizar-compra {
-  background-color: #28a745;
-  color: #fff;
-  padding: 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 /* Estilização da escolha de tamanho da bota texana */
-.select-tamanho {
+.select-tamanho label {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -158,7 +160,7 @@ header h1 {
   text-transform: uppercase; /* Estilo western com texto maiúsculo */
 }
 
-.select-tamanho select {
+.select-tamanho select label {
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -169,7 +171,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
-.select-tamanho select:focus {
+.select-tamanho select:focus label{
   border-color: #8B4513; /* Destaque na seleção com borda colorida */
   outline: none;
 }
