@@ -46,23 +46,16 @@ function exibirProdutos(produtosFiltrados = produtos) {
       lista.appendChild(item);
   });
 }
-
-produtos.forEach(produto => {
-  const btn = produto.querySelector('.adicionar-carrinho');
-  btn.addEventListener('click', () => {
-      const nome = produto.querySelector('h3').textContent;
-      const precoOriginal = parseFloat(produto.querySelector('.preco').textContent.replace('R$', '').replace(',', '.'));
-      const tamanho = produto.querySelector('.tamanho').value;
-      const categoria = produto.dataset.categoria;
-
-      // Adiciona o produto ao carrinho com categoria
-      carrinho.push({ nome, preco: precoOriginal, tamanho, categoria });
-      atualizarCarrinho();
-
-      alert(`${nome} foi adicionado ao carrinho!`);
-  });
-});
-
+function adicionarAoCarrinho(produtoId) {
+  const produto = produtos.find(p => p.id === produtoId);
+  const itemCarrinho = carrinho.find(item => item.id === produtoId);
+  if (itemCarrinho) {
+      itemCarrinho.quantidade++;
+  } else {
+      carrinho.push({ ...produto, quantidade: 1 });
+  }
+  atualizarCarrinho();
+}
 function atualizarCarrinho() {
   const lista = document.getElementById("carrinho-itens");
   lista.innerHTML = "";
