@@ -100,13 +100,55 @@ header h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.select-tamanho {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
 .select-tamanho label {
-  font-size: 16px;               /* Tamanho adequado para a leitura */
-  font-weight: bold;             /* Deixa o texto em negrito */
-  color: #8B4513;                /* Cor marrom estilo western */
-  text-transform: uppercase;     /* Coloca o texto em maiúsculas */
-  margin-bottom: 5px;            /* Espaço de 5px abaixo do label para separar da caixa de seleção */
-  display: inline-block;         /* Garante que o label e a caixa de seleção fiquem na mesma linha */
+  font-size: 16px;
+  color: #8B4513; /* Cor de destaque no texto */
+  margin-bottom: 5px;
+  font-weight: bold; /* Negrito para maior visibilidade */
+  text-transform: uppercase; /* Estilo western com texto maiúsculo */
+}
+
+.select-tamanho select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  color: #555;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.select-tamanho select:focus {
+  border-color: #8B4513; /* Destaque na seleção com borda colorida */
+  outline: none;
+}
+
+/* Estilização de botão */
+.produto button {
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.produto button:hover {
+  background-color: #A0522D; /* Efeito de hover */
 }
 
 .carrinho h2 {
