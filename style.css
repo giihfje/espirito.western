@@ -1,89 +1,117 @@
-/* Reset e fontes */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  color: #4b3621;
-  background-color: #f8f4e3;
 }
 
-/* Cabeçalho */
-.header {
-  background-color: #8b4513;
+body {
+  background-color: #f3f0f0;
+  color: #0a0a0a;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #000000;
+  color: #f8f7ef;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+
+.filtros {
+  display: flex;
+  gap: 20px;
+  padding: 15px 20px;
+  justify-content: center;
+  background-color: #f1f4f1;
+  border-bottom: 1px solid #151515;
+}
+
+.filtros select,
+.filtros input[type="text"] {
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #521212;
+  border-radius: 5px;
+}
+
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.produto {
+  background-color: #fdfcfc;
+  border: 1px solid #d7c6c6;
+  border-radius: 8px;
+  width: 230px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.produto h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #020202;
+}
+
+.produto button {
+  background-color: #1e1d1d;
   color: #fff;
-  padding: 1rem 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
-
-.header .container {
+.cart-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-/* Hero */
-.hero {
-  background-image: url('images/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 5rem 1rem;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-}
-
-/* Produtos */
-.produtos {
-  padding: 2rem;
-}
-
-.produto-card {
-  display: inline-block;
-  width: 200px;
-  margin: 1rem;
-  padding: 1rem;
-  background: white;
+.carrinho {
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
+  justify-content: space-between;
+  padding: 20px;
+  width: 300px;
+  cursor: pointer;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho h2 {
   text-align: center;
 }
 
-.produto-card img {
-  max-width: 100%;
-  border-radius: 8px;
+.carrinho-itens li {
+  margin-bottom: 10px;
 }
 
-/* Carrinho */
-.carrinho {
-  padding: 2rem;
-  text-align: center;
-}
-
-.carrinho-lista p {
-  text-align: left;
-}
-
-/* Rodapé */
-.footer {
-  text-align: center;
-  background-color: #8b4513;
-  color: white;
-  padding: 1rem;
+.finalizar-compra {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
 }
