@@ -125,7 +125,10 @@ footer {
   width: 100%;
 }
 
-.select-tamanho {
+label {
+  font-size: 16px;
+  color: #8B4513;
+  margin-bottom: 5px;
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -134,26 +137,4 @@ footer {
   background-color: #f4f4f4;
   border: 1px solid #ddd;
   border-radius: 5px;
-}
-
-.select-tamanho label {
-  font-size: 16px;
-  color: #8B4513;
-  margin-bottom: 5px;
-}
-
-.select-tamanho select {
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: white;
-  color: #555;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.select-tamanho select:focus {
-  border-color: #8B4513; /* Destaque na seleção */
-  outline: none;
 }
