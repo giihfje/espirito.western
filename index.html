@@ -69,18 +69,13 @@
                             <option value="31">31</option>
                            <option value="32">32</option>
                         </select>
-                        <button>Meu Carrinho</button>
-                        
-                        <section id="carrinho" class="carrinho">
-                            <h2>Meu Carrinho</h2>
-                            <div class="carrinho-lista">
-                              <p>Seu carrinho está vazio.</p>
-                            </div>
-                            <div class="carrinho-total">
-                              <h3>Total: R$ <span id="total">0.00</span></h3>
-                              <button class="finalizar-compra">Finalizar Compra</button>
-                            </div>
-                          </section>
+                        <button
+     class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="carrinho-itens" class="carrinho-itens"></ul>
+        <p id="total" class="total">Total: R$ 0,00</p>
+        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
 <footer>
     <p>&copy; 2024 Texanas Online</p>
 </footer>
