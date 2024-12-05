@@ -1,6 +1,8 @@
 /* Reset e fontes */
-body {
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
   color: #4b3621;
   background-color: #f8f4e3;
