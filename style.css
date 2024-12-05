@@ -88,26 +88,47 @@ header h1 {
   background-color: #fff;
   border-bottom: 1px solid #ccc;
 }
+/* Carrinho */
 .carrinho {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  justify-content: space-between;
-  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
   width: 300px;
-  cursor: pointer;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .carrinho h2 {
-  text-align: center;
+  margin-bottom: 15px;
 }
 
-.carrinho-itens li {
-  margin-bottom: 10px;
+.carrinho ul {
+  list-style: none;
 }
 
+.carrinho li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.carrinho button {
+  margin-top: 20px;
+  background-color: #28a745;
+  padding: 10px;
+  border: none;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carrinho button:hover {
+  background-color: #218838;
+}
 .finalizar-compra {
   background-color: #28a745;
   color: #fff;
