@@ -103,9 +103,14 @@ header h1 {
 .carrinho h2 {
   text-align: center;
 }
+.carrinho li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
 
-.carrinho-itens li {
-  margin-bottom: 10px;
+.carrinho button:hover {
+  background-color: #218838;
 }
 
 .finalizar-compra {
