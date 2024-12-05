@@ -121,7 +121,7 @@ select-tamanho {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 9px;
+  padding: 4px;
   background-color: #f4f4f4;
   border: 1px solid #ddd;
   border-radius: 5px;
