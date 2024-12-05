@@ -1,59 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espírito Western - Botas Texanas</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espírito Western</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Espírito Western</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Cabeçalho -->
-    <header>
-        <img src="imagem copy/western.png" alt="espiritowestern">  
-        <p>Bem-vindo a Espírito Western!</p>
-        <p>Caminhe com atitude, viva com liberdade-texanas!</p>
-    </header>
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Bem-vindo ao Espírito Western</h2>
+      <p>Explore nossa coleção de botas únicas e sinta o espírito do Oeste!</p>
+      <a href="#produtos" class="btn">Ver Produtos</a>
+    </div>
+  </section>
 
-    <!-- Filtros e Busca -->
-    <section class="filtros">
-        <label for="filtro-cor">Filtrar por Cor:</label>
-        <select id="filtro-cor" onchange="filtrarProdutos()">
-            <option value="">Todas</option>
-            <option value="marrom">Marrom</option>
-            <option value="brilho">Brilho</option>
-            <option value="azul">Azul</option>
-            <option value="infantil">Infantil</option>
-            <option value="branca">Branca</option>
-            <option value="preta">Preta</option>
+  <section id="produtos" class="produtos">
+    <h2>Nossos Produtos</h2>
+    <div class="produto-list">
+      <div class="produto-card">
+        <img src="imagem copy/texanasmasMARR.jpeg" alt="Bota Western 1">
+        <h3>Bota Cowboy Clássica</h3>
+        <p>Preço: R$250,00</p>
+        <label for="tamanho1">Tamanho:</label>
+        <select id="tamanho1" class="seletor-tamanho">
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
         </select>
+        <button class="adicionar-carrinho" data-produto="Bota Cowboy Clássica" data-preco="250">Adicionar ao Carrinho</button>
+      </div>
+      <!-- Repita o bloco acima para outros produtos -->
+    </div>
+  </section>
 
-    <section class="filtros">
-        <label for="filtro-tamanho">Tamanho:</label>
-        <select id="filtro-tamanho" onchange="filtrarProdutos()">
-            <option value="">Todos</option>
-            <option value="38">38</option>
-            <option value="39">39</option>
-            <option value="40">40</option>
-            <option value="41">41</option>
-            <option value="42">42</option>
-        </select>
+  <section id="carrinho" class="carrinho">
+    <h2>Meu Carrinho</h2>
+    <div class="carrinho-lista">
+      <p>Seu carrinho está vazio.</p>
+    </div>
+    <div class="carrinho-total">
+      <h3>Total: R$ <span id="total">0.00</span></h3>
+      <button class="finalizar-compra">Finalizar Compra</button>
+    </div>
+  </section>
 
-        <label for="pesquisa-produto">Pesquisar:</label>
-        <input type="text" id="pesquisa-produto" placeholder="Buscar...">
-    </section>
+  <footer class="footer">
+    <p>&copy; 2024 Espírito Western. Todos os direitos reservados.</p>
+  </footer>
 
-    <!-- Lista de Produtos -->
-    <section class="produtos" id="produtos-lista"></section>
-
-    <!-- Carrinho -->
-    <aside class="carrinho">
-        <h2>Seu Carrinho</h2>
-        <ul id="carrinho-itens"></ul>
-        <p id="total">Total: R$ 0,00</p>
-        <button onclick="finalizarCompra()">Finalizar Compra</button>
-    </aside>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
