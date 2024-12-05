@@ -79,48 +79,6 @@ header h1 {
   background-color: #444;
 }
 
-label {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #8B4513; /* Cor de destaque no texto */
-  margin-bottom: 5px;
-  font-weight: bold; /* Negrito para maior visibilidade */
-  text-transform: uppercase; /* Estilo western com texto maiúsculo */
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: white;
-  color: #555;
-  width: 100%;
-  margin-bottom: 10px;
-  border-color: #8B4513; /* Destaque na seleção com borda colorida */
-  outline: none;
-}
-
-/* Estilização de botão */
-.produto button label{
-  background-color: #8B4513;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  width: 100%;
-}
-
-.produto button:hover {
-  background-color: #A0522D; /* Efeito de hover */
-}
-
 footer {
   background-color: #8B4513; /* Cor de fundo marrom estilo western */
   color: white;
