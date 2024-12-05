@@ -1,71 +1,41 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texas Farm - Botas Texanas</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espírito Western - Botas Texanas e mais</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <h1>Texas Farm</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Promoções</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="javascript:void(0);" id="cart-icon" onclick="toggleCart()">Carrinho</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Promo Banner -->
-    <section class="promo-banner">
-        <h2>Promoção Imperdível! Até 30% OFF nas Botas Texanas!</h2>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/produtos">Produtos</a>
+      <a href="/contato">Contato</a>
+      <a href="/trocas">Política de Trocas</a>
+      <a href="/carrinho">Carrinho</a>
+    </nav>
+    <input type="text" placeholder="Pesquisar produtos..." id="search-bar">
+  </header>
+  <main>
+    <section class="banner">
+      <img src="promo_banner.jpg" alt="Promoção Especial">
     </section>
-
-    <!-- Product Categories -->
-    <section class="categories">
-        <h2>Categorias</h2>
-        <div class="category">
-            <a href="#">Botas</a>
-        </div>
-        <div class="category">
-            <a href="#">Roupas</a>
-        </div>
-        <div class="category">
-            <a href="#">Acessórios</a>
-        </div>
+    <section class="categorias">
+      <h2>Categorias</h2>
+      <ul>
+        <li><a href="/produtos?categoria=botas">Botas</a></li>
+        <li><a href="/produtos?categoria=roupas">Roupas</a></li>
+        <li><a href="/produtos?categoria=acessorios">Acessórios</a></li>
+      </ul>
     </section>
-
-    <!-- Product Gallery -->
-    <section class="product-gallery">
-        <h2>Novidades</h2>
-        <div class="product" data-id="1">
-            <img src="images/boot1.jpg" alt="Bota Texana 1">
-            <p>Bota Texana Cowboy</p>
-            <p>R$ 299,99</p>
-            <button onclick="addToCart({name: 'Bota Texana Cowboy', price: 299.99})">Adicionar ao Carrinho</button>
-        </div>
-        <div class="product" data-id="2">
-            <img src="images/boot2.jpg" alt="Bota Texana 2">
-            <p>Bota Texana Clássica</p>
-            <p>R$ 350,00</p>
-            <button onclick="addToCart({name: 'Bota Texana Clássica', price: 350.00})">Adicionar ao Carrinho</button>
-        </div>
+    <section class="destaques">
+      <h2>Destaques</h2>
+      <!-- Exibição de produtos mais vendidos e novidades -->
+      <div class="produtos">
+        <!-- Produtos destacados -->
+      </div>
     </section>
-
-    <!-- Cart Sidebar -->
-    <div id="cart" class="cart">
-        <h3>Carrinho de Compras</h3>
-        <div id="cart-items"></div>
-        <button onclick="checkout()">Finalizar Compra</button>
-    </div>
-
-    <script src="scripts.js"></script>
+  </main>
 </body>
 </html>
