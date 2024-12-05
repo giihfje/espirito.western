@@ -102,11 +102,11 @@ header h1 {
 }
 
 .carrinho h2 {
-  margin-bottom: 15px;
+  text-align: center;
 }
 
-.carrinho ul {
-  list-style: none;
+.carrinho-itens li {
+  margin-bottom: 10px;
 }
 
 .carrinho li {
