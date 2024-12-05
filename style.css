@@ -1,9 +1,9 @@
-/* Reset básico */
+/* Reset e fontes */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4efe6;
+  font-family: Arial, sans-serif;
   color: #4b3621;
+  background-color: #f8f4e3;
 }
 
 /* Cabeçalho */
@@ -33,97 +33,55 @@ body {
   font-weight: bold;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
 /* Hero */
 .hero {
-  background-image: url('hero-bg.jpg');
+  background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
 }
 
 .hero h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
-
-.hero .btn {
-  background-color: #8b4513;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.hero .btn:hover {
-  background-color: #a0522d;
 }
 
 /* Produtos */
 .produtos {
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.produto-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  padding: 2rem;
 }
 
 .produto-card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 1rem;
+  display: inline-block;
   width: 200px;
-  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .produto-card img {
   max-width: 100%;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #8b4513;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #a0522d;
+  border-radius: 8px;
 }
 
 /* Carrinho */
 .carrinho {
-  padding: 2rem 1rem;
+  padding: 2rem;
   text-align: center;
 }
 
-.carrinho-lista {
-  margin: 1rem auto;
-  max-width: 600px;
+.carrinho-lista p {
   text-align: left;
 }
 
 /* Rodapé */
 .footer {
   text-align: center;
-  padding: 1rem;
   background-color: #8b4513;
   color: white;
+  padding: 1rem;
 }

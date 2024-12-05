@@ -18,24 +18,26 @@
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
+      <a href="#carrinho" class="carrinho-btn">Carrinho</a>
     </div>
   </header>
 
   <section id="home" class="hero">
-    <div class="hero-text">
-      <h2>Bem-vindo ao Espírito Western</h2>
-      <p>Explore nossa coleção de botas únicas e sinta o espírito do Oeste!</p>
+    <div class="hero-content">
+      <h2>Sinta o Espírito do Oeste</h2>
+      <p>Explore nossa coleção de botas e acessórios autênticos.</p>
       <a href="#produtos" class="btn">Ver Produtos</a>
     </div>
   </section>
 
   <section id="produtos" class="produtos">
-    <h2>Nossos Produtos</h2>
+    <h2>Botas Destaques</h2>
     <div class="produto-list">
+      <!-- Produto 1 -->
       <div class="produto-card">
-        <img src="imagem copy/texanasmasMARR.jpeg" alt="Bota Western 1">
-        <h3>Bota Cowboy Clássica</h3>
-        <p>Preço: R$250,00</p>
+        <img src="images/bota1.jpg" alt="Bota Western Clássica">
+        <h3>Bota Western Clássica</h3>
+        <p>Preço: R$ 350,00</p>
         <label for="tamanho1">Tamanho:</label>
         <select id="tamanho1" class="seletor-tamanho">
           <option value="38">38</option>
@@ -43,9 +45,22 @@
           <option value="40">40</option>
           <option value="41">41</option>
         </select>
-        <button class="adicionar-carrinho" data-produto="Bota Cowboy Clássica" data-preco="250">Adicionar ao Carrinho</button>
+        <button class="adicionar-carrinho" data-produto="Bota Western Clássica" data-preco="350">Adicionar ao Carrinho</button>
       </div>
-      <!-- Repita o bloco acima para outros produtos -->
+      <!-- Produto 2 -->
+      <div class="produto-card">
+        <img src="images/bota2.jpg" alt="Bota Adventure">
+        <h3>Bota Adventure</h3>
+        <p>Preço: R$ 420,00</p>
+        <label for="tamanho2">Tamanho:</label>
+        <select id="tamanho2" class="seletor-tamanho">
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+        </select>
+        <button class="adicionar-carrinho" data-produto="Bota Adventure" data-preco="420">Adicionar ao Carrinho</button>
+      </div>
     </div>
   </section>
 
