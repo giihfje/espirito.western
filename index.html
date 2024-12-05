@@ -1,77 +1,71 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+ <!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espírito Western - Loja de Botas Texanas</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Texas Farm - Botas Texanas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <!-- Header -->
     <header>
-        <img src="imagem copy/western.png" alt="espiritowestern">  
-        <p>Bem-vindo a Espírito Western!</p>
-        <p>Caminhe com atitude, viva com liberdade-texanas!</p>
+        <div class="logo">
+            <h1>Texas Farm</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="javascript:void(0);" id="cart-icon" onclick="toggleCart()">Carrinho</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="filtros">
-        <label for="filtro-cor">Filtrar por Cor:</label>
-        <select id="filtro-cor" onchange="filtrarProdutos()">
-            <option value="">Todas</option>
-            <option value="marrom">Marrom</option>
-            <option value="brilho">Brilho</option>
-            <option value="azul">Azul</option>
-            <option value="infantil">Infantil</option>
-            <option value="branca">Branca</option>
-            <option value="preta">Preta</option>
-        </select>
 
-        <label for="pesquisa-produto">Pesquisar:</label>
-        <input type="text" id="pesquisa-produto" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <h2>Promoção Imperdível! Até 30% OFF nas Botas Texanas!</h2>
     </section>
 
-    <section class="produtos" id="produtos-lista">
+    <!-- Product Categories -->
+    <section class="categories">
+        <h2>Categorias</h2>
+        <div class="category">
+            <a href="#">Botas</a>
+        </div>
+        <div class="category">
+            <a href="#">Roupas</a>
+        </div>
+        <div class="category">
+            <a href="#">Acessórios</a>
+        </div>
+    </section>
 
+    <!-- Product Gallery -->
+    <section class="product-gallery">
+        <h2>Novidades</h2>
+        <div class="product" data-id="1">
+            <img src="images/boot1.jpg" alt="Bota Texana 1">
+            <p>Bota Texana Cowboy</p>
+            <p>R$ 299,99</p>
+            <button onclick="addToCart({name: 'Bota Texana Cowboy', price: 299.99})">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-id="2">
+            <img src="images/boot2.jpg" alt="Bota Texana 2">
+            <p>Bota Texana Clássica</p>
+            <p>R$ 350,00</p>
+            <button onclick="addToCart({name: 'Bota Texana Clássica', price: 350.00})">Adicionar ao Carrinho</button>
+        </div>
     </section>
-    <label 
-    for="tamanho-bota">Escolha o tamanho :</label>
-                <select id="tamanho-bota">
-                    <option value="12">12</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="20">20</option>
-                            <option value="22">22</option>
-                            <option value="24">24</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                           <option value="32">32</option>
-                    <option value="33">33</option>
-                    <option value="34">34</option>
-                    <option value="35">35</option>
-                    <option value="36">36</option>
-                    <option value="37">37</option>
-                    <option value="38">38</option>
-                    <option value="39">39</option>
-                    <option value="40">40</option>
-                    <option value="41">41</option>
-                    <option value="42">42</option>
-                </select>
-                <button
-     class="carrinho">
-        <h2>Seu Carrinho</h2>
-        <ul id="carrinho-itens" class="carrinho-itens"></ul>
-        <p id="total" class="total">Total: R$ 0,00</p>
-        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
-    </section>
-<footer>
-    <p>&copy; 2024 Texanas Online</p>
-</footer>
-    <script src="script.js"></script>
+
+    <!-- Cart Sidebar -->
+    <div id="cart" class="cart">
+        <h3>Carrinho de Compras</h3>
+        <div id="cart-items"></div>
+        <button onclick="checkout()">Finalizar Compra</button>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
