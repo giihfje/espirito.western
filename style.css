@@ -101,7 +101,7 @@ header h1 {
 }
 
 .select-tamanho {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -112,7 +112,7 @@ header h1 {
 }
 
 .select-tamanho label {
-  font-size: 16px;
+  font-size: 10px;
   color: #8B4513; /* Cor de destaque no texto */
   margin-bottom: 5px;
   font-weight: bold; /* Negrito para maior visibilidade */
@@ -121,13 +121,13 @@ header h1 {
 
 .select-tamanho select {
   padding: 8px;
-  font-size: 16px;
+  font-size: 6px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
   color: #555;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .select-tamanho select:focus {
@@ -165,4 +165,14 @@ header h1 {
   padding: 12px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+footer {
+  background-color: #8B4513; /* Cor de fundo marrom estilo western */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
