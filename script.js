@@ -1,60 +1,57 @@
-// Seletores e variáveis globais
-const produtos = document.querySelectorAll('.produto');
-const listaCarrinho = document.querySelector('.lista-carrinho');
-const totalElement = document.querySelector('.total');
-let carrinho = [];
-
-// Função para aplicar promoções
-function aplicarPromocoes() {
-    let totalDesconto = 0;
-
-    carrinho.forEach(item => {
-        // Promoção: Texanas tamanho 40 têm 15% de desconto
-        if (item.categoria === 'texanas' && item.tamanho === '40') {
-            const desconto = item.preco * 0.15; // 15% de desconto
-            totalDesconto += desconto;
-            item.preco -= desconto; // Atualiza o preço no carrinho
-        }
-    });
-
-    return totalDesconto;
+function exibirProdutos(produtosFiltrados = produtos) {
+  const lista = document.getElementById("produtos-lista");
+  lista.innerHTML = "";
+  produtosFiltrados.forEach(produto => {
+      const item = document.createElement("div");
+      item.className = "produto";
+      item.innerHTML = `
+          <img src="./imagem copy/image copy 2.png" alt="${produto.nome}">
+          <h2>${produto.nome}</h2>
+          <p>R$ ${produto.preco.toFixed(2)}</p>
+          <label for="tamanho-${produto.id}">Tamanho:</label>
+          <select id="tamanho-${produto.id}">
+              <option value="P">P</option>
+              <option value="M">M</option>
+              <option value="G">G</option>
+              <option value="GG">GG</option>
+          </select>
+          <button onclick="adicionarAoCarrinho(${produto.id})">Adicionar ao Carrinho</button>
+      `;
+      lista.appendChild(item);
+  });
 }
 
-// Função para atualizar o carrinho
+function adicionarAoCarrinho(produtoId) {
+  const produto = produtos.find(p => p.id === produtoId);
+  const tamanho = document.getElementById(`tamanho-${produtoId}`).value; // Pega o tamanho selecionado
+  const itemCarrinho = carrinho.find(item => item.id === produtoId && item.tamanho === tamanho);
+  
+  if (itemCarrinho) {
+      itemCarrinho.quantidade++;
+  } else {
+      carrinho.push({ ...produto, quantidade: 1, tamanho });
+  }
+  atualizarCarrinho();
+}
+
 function atualizarCarrinho() {
-    listaCarrinho.innerHTML = '';
-    let total = 0;
-
-    carrinho.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.nome} - Tamanho: ${item.tamanho} - R$ ${item.preco.toFixed(2)}`;
-        listaCarrinho.appendChild(li);
-        total += item.preco;
-    });
-
-    const totalDesconto = aplicarPromocoes();
-    totalElement.textContent = `Total: R$ ${(total - totalDesconto).toFixed(2)}`;
-
-    if (totalDesconto > 0) {
-        const descontoMsg = document.createElement('p');
-        descontoMsg.textContent = `Você economizou: R$ ${totalDesconto.toFixed(2)} com promoções!`;
-        listaCarrinho.appendChild(descontoMsg);
-    }
+  const lista = document.getElementById("carrinho-itens");
+  lista.innerHTML = "";
+  let total = 0;
+  carrinho.forEach(item => {
+      total += item.preco * item.quantidade;
+      const li = document.createElement("li");
+      li.innerHTML = `
+          ${item.nome} (Tamanho: ${item.tamanho}) - 
+          ${item.quantidade} x R$ ${item.preco.toFixed(2)}
+          <button onclick="removerDoCarrinho(${item.id}, '${item.tamanho}')">Remover</button>
+      `;
+      lista.appendChild(li);
+  });
+  document.getElementById("total").innerText = `Total: R$ ${total.toFixed(2)}`;
 }
 
-// Adicionar produto ao carrinho
-produtos.forEach(produto => {
-    const btn = produto.querySelector('.adicionar-carrinho');
-    btn.addEventListener('click', () => {
-        const nome = produto.querySelector('h3').textContent;
-        const precoOriginal = parseFloat(produto.querySelector('.preco').textContent.replace('R$', '').replace(',', '.'));
-        const tamanho = produto.querySelector('.tamanho').value;
-        const categoria = produto.dataset.categoria;
-
-        // Adiciona o produto ao carrinho com categoria
-        carrinho.push({ nome, preco: precoOriginal, tamanho, categoria });
-        atualizarCarrinho();
-
-        alert(`${nome} foi adicionado ao carrinho!`);
-    });
-});
+function removerDoCarrinho(produtoId, tamanho) {
+  carrinho = carrinho.filter(item => !(item.id === produtoId && item.tamanho === tamanho));
+  atualizarCarrinho();
+}
