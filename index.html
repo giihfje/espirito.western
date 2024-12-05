@@ -10,11 +10,24 @@
 
     <!-- Cabeçalho -->
     <header>
-        <h1>Espírito Western</h1>
-        <p>Autenticidade do Oeste em cada passo!</p>
+        <img src="imagem copy/western.png" alt="espiritowestern">  
+        <p>Bem-vindo a Espírito Western!</p>
+        <p>Caminhe com atitude, viva com liberdade-texanas!</p>
     </header>
 
     <!-- Filtros e Busca -->
+    <section class="filtros">
+        <label for="filtro-cor">Filtrar por Cor:</label>
+        <select id="filtro-cor" onchange="filtrarProdutos()">
+            <option value="">Todas</option>
+            <option value="marrom">Marrom</option>
+            <option value="brilho">Brilho</option>
+            <option value="azul">Azul</option>
+            <option value="infantil">Infantil</option>
+            <option value="branca">Branca</option>
+            <option value="preta">Preta</option>
+        </select>
+
     <section class="filtros">
         <label for="filtro-tamanho">Tamanho:</label>
         <select id="filtro-tamanho" onchange="filtrarProdutos()">
