@@ -100,6 +100,15 @@ header h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.select-tamanho label {
+  font-size: 16px;               /* Tamanho adequado para a leitura */
+  font-weight: bold;             /* Deixa o texto em negrito */
+  color: #8B4513;                /* Cor marrom estilo western */
+  text-transform: uppercase;     /* Coloca o texto em maiúsculas */
+  margin-bottom: 5px;            /* Espaço de 5px abaixo do label para separar da caixa de seleção */
+  display: inline-block;         /* Garante que o label e a caixa de seleção fiquem na mesma linha */
+}
+
 .carrinho h2 {
   text-align: center;
 }
