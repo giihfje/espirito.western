@@ -79,7 +79,7 @@ header h1 {
   background-color: #444;
 }
 
-select-tamanho {
+label {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -98,7 +98,7 @@ label {
   text-transform: uppercase; /* Estilo western com texto maiúsculo */
 }
 
-.select-tamanho select {
+label {
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -109,13 +109,13 @@ label {
   margin-bottom: 10px;
 }
 
-.select-tamanho select:focus {
+label {
   border-color: #8B4513; /* Destaque na seleção com borda colorida */
   outline: none;
 }
 
 /* Estilização de botão */
-.produto button {
+.produto button label{
   background-color: #8B4513;
   color: white;
   border: none;
