@@ -117,7 +117,7 @@ header h1 {
 
 .carrinho button {
   margin-top: 20px;
-  background-color: #28a745;
+  background-color: #4a8b5967;
   padding: 10px;
   border: none;
   color: white;
@@ -150,7 +150,7 @@ select-tamanho {
 
 .select-tamanho label {
   font-size: 16px;
-  color: #8B4513; /* Cor de destaque no texto */
+  color: #0f0f0f; /* Cor de destaque no texto */
   margin-bottom: 5px;
   font-weight: bold; /* Negrito para maior visibilidade */
   text-transform: uppercase; /* Estilo western com texto maiúsculo */
@@ -168,12 +168,12 @@ select-tamanho {
 }
 
 .select-tamanho select:focus {
-  border-color: #8B4513; /* Destaque na seleção com borda colorida */
+  border-color: #171717; /* Destaque na seleção com borda colorida */
   outline: none;
 }
 
 footer {
-  background-color: #8B4513; /* Cor de fundo marrom estilo western */
+  background-color: #010101; /* Cor de fundo marrom estilo western */
   color: white;
   text-align: center;
   padding: 10px;
