@@ -3,82 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espírito Western - Loja de Botas Texanas</title>
+    <title>Espírito Western - Botas Texanas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Cabeçalho -->
     <header>
-        <img src="imagem copy/western.png" alt="espiritowestern">  
-        <p>Bem-vindo a Espírito Western!</p>
-        <p>Caminhe com atitude, viva com liberdade-texanas!</p>
+        <h1>Espírito Western</h1>
+        <p>Autenticidade do Oeste em cada passo!</p>
     </header>
+
+    <!-- Filtros e Busca -->
     <section class="filtros">
-        <label for="filtro-cor">Filtrar por Cor:</label>
-        <select id="filtro-cor" onchange="filtrarProdutos()">
-            <option value="">Todas</option>
-            <option value="marrom">Marrom</option>
-            <option value="brilho">Brilho</option>
-            <option value="azul">Azul</option>
-            <option value="infantil">Infantil</option>
-            <option value="branca">Branca</option>
-            <option value="preta">Preta</option>
+        <label for="filtro-tamanho">Tamanho:</label>
+        <select id="filtro-tamanho" onchange="filtrarProdutos()">
+            <option value="">Todos</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
         </select>
 
         <label for="pesquisa-produto">Pesquisar:</label>
-        <input type="text" id="pesquisa-produto" placeholder="Buscar produto..." onkeyup="filtrarProdutos()">
+        <input type="text" id="pesquisa-produto" placeholder="Buscar...">
     </section>
 
-    <section class="produtos" id="produtos-lista">
+    <!-- Lista de Produtos -->
+    <section class="produtos" id="produtos-lista"></section>
 
-    </section>
-    <label 
-    for="tamanho-bota">Escolha o tamanho adulto:</label>
-                <select id="tamanho-bota">
-                    <option value="33">33</option>
-                    <option value="34">34</option>
-                    <option value="35">35</option>
-                    <option value="36">36</option>
-                    <option value="37">37</option>
-                    <option value="38">38</option>
-                    <option value="39">39</option>
-                    <option value="40">40</option>
-                    <option value="41">41</option>
-                    <option value="42">42</option>
-                </select>
-                <button></button>
-
-            </section>
-            <label 
-            for="tamanho-bota">Escolha o tamanho infantil:</label>
-                        <select id="tamanho-bota">
-                            <option value="12">12</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="20">20</option>
-                            <option value="22">22</option>
-                            <option value="24">24</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                           <option value="32">32</option>
-                        </select>
-                        <button
-     class="carrinho">
+    <!-- Carrinho -->
+    <aside class="carrinho">
         <h2>Seu Carrinho</h2>
-        <ul id="carrinho-itens" class="carrinho-itens"></ul>
-        <p id="total" class="total">Total: R$ 0,00</p>
-        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
-    </section>
-<footer>
-    <p>&copy; 2024 Texanas Online</p>
-</footer>
+        <ul id="carrinho-itens"></ul>
+        <p id="total">Total: R$ 0,00</p>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </aside>
+
     <script src="script.js"></script>
 </body>
 </html>
